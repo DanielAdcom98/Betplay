@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Estrategia integrada de crecimiento para Casino BetPlay en Google Ads, con análisis de demanda, estructura de campañas y hoja de ruta de 90 días." />
+  <title>BetPlay · Estrategia de crecimiento Casino 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --yellow: #ffc000;
+      --yellow-soft: #fff5cf;
+      --black: #111111;
+      --white: #ffffff;
+      --gray-900: #242424;
+      --gray-700: #555555;
+      --gray-500: #7b7b7b;
+      --gray-200: #e7e7e7;
+      --gray-100: #f5f5f5;
+      --green: #157347;
+      --green-soft: #e8f6ef;
+      --red: #b42318;
+      --red-soft: #fff0ee;
+      --blue: #2457c5;
+      --blue-soft: #eef3ff;
+      --radius: 22px;
+      --shadow: 0 18px 60px rgba(0, 0, 0, .08);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Poppins", Arial, sans-serif;
+      color: var(--black);
+      background: var(--gray-100);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .container { width: min(1320px, calc(100% - 40px)); margin: 0 auto; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      margin: 24px auto 14px;
+      padding: clamp(38px, 6vw, 82px);
+      color: var(--white);
+      background: var(--black);
+      border-radius: 30px;
+      min-height: 540px;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 192, 0, .14);
+    }
+    .hero::before { width: 460px; height: 460px; top: -245px; right: -95px; }
+    .hero::after { width: 280px; height: 280px; right: 135px; bottom: -185px; }
+    .hero-inner { position: relative; z-index: 1; max-width: 1000px; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 15px;
+      margin-bottom: 24px;
+      border-radius: 999px;
+      color: var(--black);
+      background: var(--yellow);
+      font-size: .79rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--black); }
+    h1, h2, h3, h4 { line-height: 1.15; margin: 0; }
+    h1 {
+      max-width: 920px;
+      font-size: clamp(2.7rem, 6.6vw, 6.3rem);
+      letter-spacing: -.055em;
+      text-transform: uppercase;
+    }
+    .hero-lead { max-width: 850px; margin: 26px 0 0; color: rgba(255,255,255,.76); font-size: clamp(1rem, 1.6vw, 1.2rem); }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+    .hero-meta span { border: 1px solid rgba(255,255,255,.18); border-radius: 999px; padding: 9px 13px; color: rgba(255,255,255,.8); font-size: .78rem; }
+
+    .nav-wrap { position: sticky; top: 10px; z-index: 20; margin-bottom: 22px; }
+    .nav {
+      display: flex;
+      gap: 7px;
+      padding: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      border: 1px solid rgba(17,17,17,.08);
+      border-radius: 999px;
+      background: rgba(255,255,255,.94);
+      box-shadow: 0 10px 35px rgba(0,0,0,.08);
+      backdrop-filter: blur(12px);
+    }
+    .nav::-webkit-scrollbar { display: none; }
+    .nav a { flex: 0 0 auto; padding: 9px 14px; border-radius: 999px; color: var(--gray-700); text-decoration: none; font-size: .76rem; font-weight: 600; }
+    .nav a:hover, .nav a.active { color: var(--black); background: var(--yellow); }
+
+    main { padding: 10px 0 70px; }
+    .section { scroll-margin-top: 92px; margin: 26px 0; padding: clamp(24px, 4vw, 48px); background: var(--white); border: 1px solid rgba(17,17,17,.07); border-radius: 28px; box-shadow: var(--shadow); }
+    .section-heading { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 28px; align-items: start; margin-bottom: 30px; }
+    .section-number { color: var(--gray-500); font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .section-title { font-size: clamp(1.75rem, 4vw, 3.25rem); letter-spacing: -.04em; text-transform: uppercase; }
+    .section-intro { margin: 12px 0 0; max-width: 900px; color: var(--gray-700); }
+    .subhead { margin: 34px 0 15px; font-size: 1.24rem; letter-spacing: -.02em; }
+    .muted { color: var(--gray-700); }
+    .small { font-size: .82rem; }
+
+    .decision {
+      display: grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    .decision-main { padding: clamp(24px, 4vw, 44px); border-radius: var(--radius); background: var(--yellow); }
+    .decision-label { display: block; margin-bottom: 12px; font-size: .77rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .decision-main h3 { max-width: 800px; font-size: clamp(1.7rem, 4vw, 3.2rem); letter-spacing: -.04em; }
+    .decision-main p { max-width: 820px; margin: 16px 0 0; }
+    .decision-side { display: flex; flex-direction: column; justify-content: space-between; padding: 28px; border-radius: var(--radius); color: var(--white); background: var(--black); }
+    .decision-side strong { color: var(--yellow); font-size: clamp(2.8rem, 6vw, 5.2rem); line-height: 1; letter-spacing: -.06em; }
+    .decision-side p { margin: 16px 0 0; color: rgba(255,255,255,.72); }
+
+    .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+    .stat { min-height: 175px; padding: 23px; border-left: 5px solid var(--yellow); border-radius: 16px; background: var(--gray-100); }
+    .stat .label { display: block; margin-bottom: 18px; color: var(--gray-500); font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .stat strong { display: block; font-size: clamp(1.75rem, 3vw, 2.55rem); line-height: 1; letter-spacing: -.04em; }
+    .stat p { margin: 10px 0 0; color: var(--gray-700); font-size: .78rem; line-height: 1.45; }
+
+    .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .card { padding: 25px; border: 1px solid var(--gray-200); border-radius: var(--radius); background: var(--white); }
+    .card.dark { color: var(--white); background: var(--black); border-color: var(--black); }
+    .card.dark p { color: rgba(255,255,255,.7); }
+    .card.yellow { background: var(--yellow-soft); border-color: rgba(255,192,0,.55); }
+    .card h3 { margin-bottom: 10px; font-size: 1.12rem; }
+    .card p { margin: 0; color: var(--gray-700); font-size: .9rem; }
+    .card .tag { display: inline-block; margin-bottom: 16px; padding: 6px 10px; border-radius: 999px; color: var(--gray-700); background: var(--gray-100); font-size: .68rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+    .card.dark .tag { color: var(--black); background: var(--yellow); }
+
+    .callout { margin: 22px 0; padding: 22px 24px; border-radius: 16px; background: var(--blue-soft); border-left: 5px solid var(--blue); }
+    .callout.warning { background: var(--red-soft); border-left-color: var(--red); }
+    .callout.success { background: var(--green-soft); border-left-color: var(--green); }
+    .callout strong { display: block; margin-bottom: 6px; }
+    .callout p { margin: 0; color: var(--gray-700); }
+
+    .table-wrap { overflow-x: auto; margin: 18px 0 8px; border: 1px solid var(--gray-200); border-radius: 18px; }
+    table { width: 100%; border-collapse: collapse; min-width: 820px; font-size: .82rem; }
+    th { padding: 14px 15px; color: var(--yellow); background: var(--black); text-align: left; font-size: .7rem; line-height: 1.35; letter-spacing: .045em; text-transform: uppercase; }
+    td { padding: 13px 15px; border-bottom: 1px solid var(--gray-200); vertical-align: top; }
+    tbody tr:nth-child(even) { background: #fafafa; }
+    tbody tr:hover { background: var(--yellow-soft); }
+    tbody tr:last-child td { border-bottom: 0; }
+    td.num, th.num { text-align: right; white-space: nowrap; }
+    td strong { font-weight: 700; }
+    .pill { display: inline-flex; align-items: center; padding: 5px 9px; border-radius: 999px; background: var(--gray-100); font-size: .68rem; font-weight: 700; white-space: nowrap; }
+    .pill.bad { color: var(--red); background: var(--red-soft); }
+    .pill.good { color: var(--green); background: var(--green-soft); }
+    .pill.yellow { background: var(--yellow-soft); }
+
+    .list { margin: 0; padding: 0; list-style: none; }
+    .list li { position: relative; padding: 10px 0 10px 30px; border-bottom: 1px solid var(--gray-200); }
+    .list li:last-child { border-bottom: 0; }
+    .list li::before { content: "→"; position: absolute; left: 0; color: var(--yellow); font-weight: 800; }
+    .list-check li::before { content: "✓"; color: var(--green); }
+
+    .bars { display: grid; gap: 13px; margin-top: 24px; }
+    .bar-row { display: grid; grid-template-columns: 170px 1fr 92px; gap: 13px; align-items: center; }
+    .bar-label { font-size: .78rem; font-weight: 600; }
+    .bar-track { height: 13px; overflow: hidden; border-radius: 999px; background: var(--gray-200); }
+    .bar-fill { height: 100%; border-radius: inherit; background: var(--yellow); }
+    .bar-value { text-align: right; color: var(--gray-700); font-size: .75rem; }
+
+    .funnel { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 24px 0; }
+    .funnel-step { position: relative; min-height: 138px; padding: 22px; border-radius: 18px; background: var(--gray-100); }
+    .funnel-step:nth-child(2) { background: var(--yellow-soft); }
+    .funnel-step:nth-child(3) { color: var(--white); background: var(--black); }
+    .funnel-step span { display: block; margin-bottom: 12px; font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .funnel-step strong { font-size: 1.05rem; }
+    .funnel-step p { margin: 8px 0 0; color: var(--gray-700); font-size: .78rem; }
+    .funnel-step:nth-child(3) p { color: rgba(255,255,255,.7); }
+
+    .campaign-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 20px; }
+    .campaign { padding: 20px; border: 1px solid var(--gray-200); border-radius: 17px; }
+    .campaign .code { display: inline-block; margin-bottom: 14px; color: var(--gray-500); font-size: .66rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+    .campaign h3 { min-height: 48px; font-size: 1rem; }
+    .campaign p { margin: 10px 0 0; color: var(--gray-700); font-size: .76rem; }
+    .campaign.featured { background: var(--yellow-soft); border-color: var(--yellow); }
+
+    .allocation { overflow: hidden; display: flex; height: 44px; margin: 18px 0 12px; border-radius: 12px; background: var(--gray-200); }
+    .allocation span { display: flex; align-items: center; justify-content: center; min-width: 38px; font-size: .69rem; font-weight: 800; }
+    .a1 { color: var(--yellow); background: var(--black); }
+    .a2 { background: var(--yellow); }
+    .a3 { background: #ffdc70; }
+    .a4 { background: #d8d8d8; }
+    .a5 { background: #b8b8b8; }
+    .a6 { color: var(--white); background: #777; }
+    .legend { display: flex; flex-wrap: wrap; gap: 9px 16px; margin-bottom: 20px; }
+    .legend span { font-size: .72rem; color: var(--gray-700); }
+    .legend i { display: inline-block; width: 9px; height: 9px; margin-right: 6px; border-radius: 50%; }
+
+    .timeline { position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 24px; }
+    .phase { padding: 26px; border-radius: var(--radius); border: 1px solid var(--gray-200); }
+    .phase:nth-child(2) { border-color: var(--yellow); background: var(--yellow-soft); }
+    .phase:nth-child(3) { color: var(--white); background: var(--black); border-color: var(--black); }
+    .phase-number { display: inline-grid; place-items: center; width: 40px; height: 40px; margin-bottom: 18px; border-radius: 50%; background: var(--yellow); font-weight: 800; }
+    .phase:nth-child(3) .phase-number { color: var(--black); }
+    .phase h3 { margin-bottom: 10px; }
+    .phase ul { margin: 16px 0 0; padding-left: 18px; color: var(--gray-700); font-size: .78rem; }
+    .phase li + li { margin-top: 8px; }
+    .phase:nth-child(3) ul { color: rgba(255,255,255,.72); }
+
+    .kpi-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+    .kpi { padding: 20px; border-radius: 16px; background: var(--gray-100); }
+    .kpi span { display: block; color: var(--gray-500); font-size: .67rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+    .kpi strong { display: block; margin-top: 10px; font-size: .95rem; }
+
+    details { margin-top: 12px; border: 1px solid var(--gray-200); border-radius: 16px; background: var(--white); }
+    summary { cursor: pointer; padding: 18px 20px; font-weight: 700; }
+    details > div { padding: 0 20px 20px; color: var(--gray-700); font-size: .86rem; }
+
+    .sources { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .source { padding: 20px; border: 1px solid var(--gray-200); border-radius: 16px; }
+    .source strong { display: block; margin-bottom: 6px; }
+    .source p { margin: 0; color: var(--gray-700); font-size: .78rem; }
+    .source a { display: inline-block; margin-top: 10px; color: var(--blue); font-size: .75rem; font-weight: 600; }
+
+    footer { padding: 8px 0 42px; color: var(--gray-700); font-size: .75rem; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 18px; padding: 0 8px; }
+
+    @media (max-width: 1060px) {
+      .stats, .campaign-grid, .kpi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .grid-3 { grid-template-columns: 1fr; }
+      .section-heading { grid-template-columns: 1fr; gap: 8px; }
+      .decision { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 760px) {
+      .container { width: min(100% - 24px, 1320px); }
+      .hero { margin-top: 12px; min-height: 500px; padding: 34px 26px; border-radius: 24px; }
+      h1 { font-size: clamp(2.15rem, 10vw, 3.2rem); }
+      .nav-wrap { top: 6px; }
+      .section { padding: 25px 20px; border-radius: 22px; }
+      .stats, .grid-2, .campaign-grid, .timeline, .kpi-grid, .sources, .funnel { grid-template-columns: 1fr; }
+      .bar-row { grid-template-columns: 115px 1fr 68px; gap: 8px; }
+      .footer-inner { flex-direction: column; }
+      .decision-side { min-height: 230px; }
+    }
+
+    @media print {
+      body { background: var(--white); }
+      .container { width: 100%; }
+      .hero, .section { box-shadow: none; break-inside: avoid; }
+      .nav-wrap { display: none; }
+      .hero { margin-top: 0; min-height: 400px; }
+      a { text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="container hero" id="inicio">
+    <div class="hero-inner">
+      <div class="eyebrow">BetPlay · Casino · Google Ads</div>
+      <h1>Estrategia de crecimiento Casino</h1>
+      <p class="hero-lead">
+        Un reporte integrado para convertir la prioridad de Casino en captura real de demanda: diagnóstico de la cuenta,
+        5.372 ideas del Planificador de Palabras Clave, estructura objetivo y plan de activación de 90 días.
+      </p>
+      <div class="hero-meta">
+        <span>Versión 1.0</span>
+        <span>Análisis: 2 de agosto de 2026</span>
+        <span>Datos cerrados: 1 de agosto de 2026</span>
+        <span>Moneda: COP</span>
+        <span>Alcance: propuesta, sin cambios en cuenta</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="container nav-wrap" aria-label="Navegación del reporte">
+    <nav class="nav">
+      <a href="#resumen">Resumen</a>
+      <a href="#diagnostico">Cuenta</a>
+      <a href="#demanda">Demanda</a>
+      <a href="#brechas">Cobertura</a>
+      <a href="#estructura">Estructura</a>
+      <a href="#inversion">Inversión</a>
+      <a href="#medios">Medios</a>
+      <a href="#roadmap">90 días</a>
+      <a href="#medicion">Medición</a>
+      <a href="#fuentes">Fuentes</a>
+    </nav>
+  </div>
+
+  <main class="container">
+    <section class="section" id="resumen">
+      <div class="section-heading">
+        <div class="section-number">01 · Resumen</div>
+        <div>
+          <h2 class="section-title">La prioridad no es subir presupuesto: es hacer que Casino pueda capturarlo</h2>
+          <p class="section-intro">
+            Casino ya representa cerca de 31% del presupuesto diario nominal de las campañas de performance revisadas,
+            pero solo 23% del gasto efectivo. La oportunidad está en ordenar intención, cobertura, ranking y experiencia
+            antes de escalar, protegiendo Marca y Deportes como motores actuales de FTD.
+          </p>
+        </div>
+      </div>
+
+      <div class="decision">
+        <article class="decision-main">
+          <span class="decision-label">Decisión recomendada</span>
+          <h3>Crear un pool incremental de crecimiento y reconstruir Search por producto e intención.</h3>
+          <p>
+            Llevar Casino de 23% a 30% del gasto efectivo en la primera fase. Avanzar a 35% únicamente cuando el reporte
+            de negocio confirme calidad, sin recortar los pisos eficientes de Marca y Deportes.
+          </p>
+        </article>
+        <aside class="decision-side">
+          <div>
+            <span class="decision-label">Meta fase 1</span>
+            <strong>30%</strong>
+          </div>
+          <p>Participación de Casino en el gasto efectivo de performance, después de sanear la captura de demanda.</p>
+        </aside>
+      </div>
+
+      <div class="stats">
+        <article class="stat">
+          <span class="label">Participación actual</span>
+          <strong>23%</strong>
+          <p>Gasto efectivo de Casino, frente a ~31% del presupuesto nominal.</p>
+        </article>
+        <article class="stat">
+          <span class="label">Inversión Casino · 30d</span>
+          <strong>$115,3 M</strong>
+          <p>Slots absorbió $105,5 M, equivalente a 91,5% del vertical.</p>
+        </article>
+        <article class="stat">
+          <span class="label">Mix no core de Slots</span>
+          <strong>58,8%</strong>
+          <p>Al menos $62,0 M en intenciones mixtas o ajenas al rol de Slots.</p>
+        </article>
+        <article class="stat">
+          <span class="label">Universo Planner</span>
+          <strong>5.372</strong>
+          <p>Ideas generadas con 11 semillas para Colombia, español y Google Search.</p>
+        </article>
+      </div>
+
+      <div class="callout">
+        <strong>FTD se mantiene como validación de negocio, no como bloqueo tecnológico.</strong>
+        <p>
+          La dificultad de llevar FTD a plataforma es transversal a toda la cuenta. Google puede operar con un proxy
+          consistente y BI debe validar semanalmente FTD y CPA FTD. La primera prioridad es estructura, tráfico, geografía,
+          landings, puja y gasto efectivo.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card">
+          <span class="tag">Proteger</span>
+          <h3>Marca y Deportes</h3>
+          <p>Conservar sus pisos eficientes y evitar que el crecimiento de Casino dependa de recortes que destruyan FTD rentable.</p>
+        </article>
+        <article class="card yellow">
+          <span class="tag">Corregir</span>
+          <h3>Search de Casino</h3>
+          <p>Separar marca-producto, genérico, ruleta/live, Slots, Aviator, Poker/Bingo, competencia y Broad experimental.</p>
+        </article>
+        <article class="card dark">
+          <span class="tag">Escalar</span>
+          <h3>Demanda incremental</h3>
+          <p>Capturar genérico y ruleta, mejorar landings y sumar medios sociales/programáticos solo con pruebas controladas.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="diagnostico">
+      <div class="section-heading">
+        <div class="section-number">02 · Cuenta</div>
+        <div>
+          <h2 class="section-title">Qué muestran los últimos 30 días</h2>
+          <p class="section-intro">
+            Ventana principal: 3 de julio al 1 de agosto de 2026. Los registros son eventos GA4 atribuidos, no FTD;
+            sirven como proxy táctico dentro de Google, mientras el dato de negocio gobierna las decisiones de escala.
+          </p>
+        </div>
+      </div>
+
+      <h3 class="subhead">Lectura por grupo operativo</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Grupo</th>
+              <th class="num">Inversión</th>
+              <th class="num">Clics</th>
+              <th class="num">Registro GA4</th>
+              <th class="num">Costo / registro</th>
+              <th>Rol en la estrategia</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Marca</strong></td><td class="num">$223,7 M</td><td class="num">1.212.533</td><td class="num">24.367</td><td class="num">$9.180</td><td><span class="pill good">Proteger</span></td></tr>
+            <tr><td><strong>Deportes</strong></td><td class="num">$149,4 M</td><td class="num">260.852</td><td class="num">2.023</td><td class="num">$73.819</td><td><span class="pill good">Proteger</span></td></tr>
+            <tr><td><strong>Casino</strong></td><td class="num">$115,3 M</td><td class="num">151.998</td><td class="num">1.683</td><td class="num">$68.525</td><td><span class="pill yellow">Reestructurar</span></td></tr>
+            <tr><td><strong>PMax general</strong></td><td class="num">$12,7 M</td><td class="num">176.020</td><td class="num">1.332</td><td class="num">$9.498</td><td><span class="pill">Validar calidad</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small muted">Marca y Deportes son más eficientes en FTD según el dato de negocio disponible, aunque el proxy GA4 no refleje esa jerarquía.</p>
+
+      <h3 class="subhead">Campañas activas de Casino</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Campaña</th>
+              <th class="num">Inversión 30d</th>
+              <th class="num">Presupuesto / día</th>
+              <th class="num">Conv. Google</th>
+              <th class="num">Reg. GA4</th>
+              <th class="num">Costo / reg.</th>
+              <th class="num">Cuota imp.</th>
+              <th class="num">Pérdida presupuesto</th>
+              <th class="num">Pérdida ranking</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Slots</strong></td><td class="num">$105,5 M</td><td class="num">$1,8 M</td><td class="num">3.020</td><td class="num">1.001</td><td class="num">$105.414</td><td class="num">29,5%</td><td class="num">23,1%</td><td class="num">47,5%</td></tr>
+            <tr><td><strong>Casino General</strong></td><td class="num">$5,5 M</td><td class="num">$7,0 M</td><td class="num">2.055</td><td class="num">676</td><td class="num">$8.189</td><td class="num">56,2%</td><td class="num">1,3%</td><td class="num">42,5%</td></tr>
+            <tr><td><strong>Aviator</strong></td><td class="num">$4,3 M</td><td class="num">$0,1 M</td><td class="num">11.068</td><td class="num">6</td><td class="num">$717.514</td><td class="num">17,4%</td><td class="num">82,3%</td><td class="num">0,3%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid-3">
+        <article class="card">
+          <span class="tag">Slots</span>
+          <h3>91,5% del gasto de Casino</h3>
+          <p>Un solo grupo de anuncios y concordancia amplia convirtieron la campaña en recolectora de toda la categoría.</p>
+        </article>
+        <article class="card">
+          <span class="tag">Casino General</span>
+          <h3>No está limitada por presupuesto</h3>
+          <p>Solo pierde 1,3% por presupuesto. Ranking, tROAS de 2.500% y volumen elegible pesan más.</p>
+        </article>
+        <article class="card">
+          <span class="tag">Aviator</span>
+          <h3>Señal de conversión distorsionada</h3>
+          <p>Las 11.068 conversiones incluyen cerca de 10.992 compras repetidas; no son comparables con registros.</p>
+        </article>
+      </div>
+
+      <h3 class="subhead">Dónde se fue la inversión visible de Slots</h3>
+      <div class="grid-2">
+        <div>
+          <div class="bars">
+            <div class="bar-row"><span class="bar-label">Competidores</span><span class="bar-track"><span class="bar-fill" style="display:block;width:100%"></span></span><span class="bar-value">$33,6 M</span></div>
+            <div class="bar-row"><span class="bar-label">Otros</span><span class="bar-track"><span class="bar-fill" style="display:block;width:47%"></span></span><span class="bar-value">$15,8 M</span></div>
+            <div class="bar-row"><span class="bar-label">Lotería / chance</span><span class="bar-track"><span class="bar-fill" style="display:block;width:25%"></span></span><span class="bar-value">$8,4 M</span></div>
+            <div class="bar-row"><span class="bar-label">Marca BetPlay</span><span class="bar-track"><span class="bar-fill" style="display:block;width:22%"></span></span><span class="bar-value">$7,3 M</span></div>
+            <div class="bar-row"><span class="bar-label">Genérico Casino</span><span class="bar-track"><span class="bar-fill" style="display:block;width:22%"></span></span><span class="bar-value">$7,3 M</span></div>
+            <div class="bar-row"><span class="bar-label">Soporte / cuenta</span><span class="bar-track"><span class="bar-fill" style="display:block;width:19%"></span></span><span class="bar-value">$6,4 M</span></div>
+            <div class="bar-row"><span class="bar-label">Gratis / dinero</span><span class="bar-track"><span class="bar-fill" style="display:block;width:19%"></span></span><span class="bar-value">$6,3 M</span></div>
+          </div>
+        </div>
+        <article class="card yellow">
+          <span class="tag">Lectura operativa</span>
+          <h3>$62,0 M necesitan dueño y regla propios</h3>
+          <p>
+            No todo es desperdicio: marca y algunos competidores pueden convertir. El problema es que hoy no pueden medirse
+            ni controlarse por separado. Las mayores aperturas provinieron de <strong>juegos de apuestas online</strong>
+            ($47,4 M), <strong>tragaperras</strong> ($16,2 M), <strong>tragamonedas</strong> ($10,2 M) y <strong>slot</strong> ($7,5 M).
+          </p>
+        </article>
+      </div>
+
+      <div class="callout success">
+        <strong>La lista de negativas del 28 de julio ya produjo una señal positiva.</strong>
+        <p>
+          En Slots, el gasto clasificado como competencia bajó de $3,38 M en los cinco días previos a $1,01 M en los cinco
+          posteriores. Aún faltan categorías como bplay, betano, betsson, 1xbet, soporte, “ganar dinero” y loterías.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <article class="card">
+          <span class="tag">Geografía</span>
+          <h3>Usar presencia física en Colombia</h3>
+          <p>Slots y Aviator operan con “presencia o interés”. Deben pasar a presencia para elevar calidad y fortalecer el control de cumplimiento.</p>
+        </article>
+        <article class="card">
+          <span class="tag">Experiencia</span>
+          <h3>Diseñar mobile first</h3>
+          <p>Entre 85% y 91% del gasto de Casino proviene de móvil. Landing, registro, verificación y depósito deben evaluarse primero allí.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="demanda">
+      <div class="section-heading">
+        <div class="section-number">03 · Demanda</div>
+        <div>
+          <h2 class="section-title">Cómo busca Colombia la categoría Casino</h2>
+          <p class="section-intro">
+            El Planificador de Palabras Clave generó 5.372 ideas a partir de 11 semillas, configurado para Colombia,
+            idioma español y red Google Search. Los totales siguientes comparan una muestra curada; no representan un
+            tamaño de mercado sumable porque Google agrupa y redondea variantes.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div>
+          <h3 class="subhead" style="margin-top:0">Mapa de demanda seleccionada</h3>
+          <div class="bars">
+            <div class="bar-row"><span class="bar-label">Marca Casino</span><span class="bar-track"><span class="bar-fill" style="display:block;width:100%"></span></span><span class="bar-value">111.770</span></div>
+            <div class="bar-row"><span class="bar-label">Ruleta / live</span><span class="bar-track"><span class="bar-fill" style="display:block;width:64.3%"></span></span><span class="bar-value">71.880</span></div>
+            <div class="bar-row"><span class="bar-label">Competencia</span><span class="bar-track"><span class="bar-fill" style="display:block;width:20.1%"></span></span><span class="bar-value">22.450</span></div>
+            <div class="bar-row"><span class="bar-label">Casino genérico</span><span class="bar-track"><span class="bar-fill" style="display:block;width:18%"></span></span><span class="bar-value">20.090</span></div>
+            <div class="bar-row"><span class="bar-label">Baja intención</span><span class="bar-track"><span class="bar-fill" style="display:block;width:7.9%"></span></span><span class="bar-value">8.840</span></div>
+            <div class="bar-row"><span class="bar-label">Slots</span><span class="bar-track"><span class="bar-fill" style="display:block;width:6.9%"></span></span><span class="bar-value">7.680</span></div>
+            <div class="bar-row"><span class="bar-label">Poker / Bingo</span><span class="bar-track"><span class="bar-fill" style="display:block;width:4.5%"></span></span><span class="bar-value">5.060</span></div>
+            <div class="bar-row"><span class="bar-label">Aviator / Crash</span><span class="bar-track"><span class="bar-fill" style="display:block;width:4%"></span></span><span class="bar-value">4.520</span></div>
+          </div>
+        </div>
+        <article class="card dark">
+          <span class="tag">Hallazgo central</span>
+          <h3>La inversión actual no sigue el mapa de demanda.</h3>
+          <p>
+            Slots concentra casi todo el gasto de Casino, pero su demanda directa es menor que Marca Casino, Ruleta y
+            Casino genérico. La escala actual proviene de concordancia amplia hacia otras intenciones, no de dominar Slots.
+          </p>
+        </article>
+      </div>
+
+      <h3 class="subhead">Clústeres de búsqueda</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Clúster</th><th class="num">Promedio mensual</th><th>Último mes</th><th class="num">Junio 2026</th><th class="num">Competencia ponderada</th><th>Lectura</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Marca Casino</strong></td><td class="num">111.770</td><td>Jun. 2026</td><td class="num">118.350</td><td class="num">20</td><td>Mayor fuente identificada; merece campaña propia.</td></tr>
+            <tr><td><strong>Ruleta y mesas live</strong></td><td class="num">71.880</td><td>Jun. 2026</td><td class="num">38.470</td><td class="num">7</td><td>Volumen alto, pero debe calificarse intención paga vs gratis.</td></tr>
+            <tr><td><strong>Competencia Casino</strong></td><td class="num">22.450</td><td>Jun. 2026</td><td class="num">26.090</td><td class="num">29</td><td>Escala suficiente para un test aislado con techo.</td></tr>
+            <tr><td><strong>Casino genérico</strong></td><td class="num">20.090</td><td>Jun. 2026</td><td class="num">24.570</td><td class="num">40</td><td>Oportunidad creciente, más costosa y casi sin cobertura.</td></tr>
+            <tr><td><strong>Baja intención</strong></td><td class="num">8.840</td><td>Jun. 2026</td><td class="num">7.720</td><td class="num">50</td><td>Aislar o negar; no mezclar con adquisición core.</td></tr>
+            <tr><td><strong>Slots y tragamonedas</strong></td><td class="num">7.680</td><td>Jun. 2026</td><td class="num">5.350</td><td class="num">21</td><td>Mucho menor que el gasto actual sugeriría.</td></tr>
+            <tr><td><strong>Poker y Bingo</strong></td><td class="num">5.060</td><td>Jun. 2026</td><td class="num">3.170</td><td class="num">31</td><td>Productos para tests acotados.</td></tr>
+            <tr><td><strong>Aviator y Crash</strong></td><td class="num">4.520</td><td>Jun. 2026</td><td class="num">4.100</td><td class="num">41</td><td>Demanda propia medible, hoy capturada por Slots.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="subhead">Términos que definen la oportunidad</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Término</th><th class="num">Promedio mensual</th><th class="num">Junio 2026</th><th>Competencia</th><th class="num">Rango de puja superior</th><th>Implicación</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>betplay casino</strong></td><td class="num">90.500</td><td class="num">90.500</td><td>Baja</td><td class="num">$21–$1.892</td><td>Propiedad de Marca-producto.</td></tr>
+            <tr><td><strong>ruleta online</strong></td><td class="num">60.500</td><td class="num">22.200</td><td>Baja</td><td class="num">$917–$8.874</td><td>Piloto separado, con calificación de intención.</td></tr>
+            <tr><td><strong>casino online</strong></td><td class="num">14.800</td><td class="num">18.100</td><td>Media</td><td class="num">$3.257–$13.173</td><td>Principal brecha genérica.</td></tr>
+            <tr><td><strong>betplay casino en vivo</strong></td><td class="num">12.100</td><td class="num">18.100</td><td>Baja</td><td class="num">$19–$69</td><td>Debe salir de Apuestas y entrar a Casino.</td></tr>
+            <tr><td><strong>ruleta virtual</strong></td><td class="num">9.900</td><td class="num">14.800</td><td>Baja</td><td class="num">$1.879–$9.825</td><td>Casi sin cobertura actual.</td></tr>
+            <tr><td><strong>wplay casino</strong></td><td class="num">12.100</td><td class="num">14.800</td><td>Baja</td><td class="num">$127–$4.323</td><td>Test de competencia, no Slots.</td></tr>
+            <tr><td><strong>slots</strong></td><td class="num">4.400</td><td class="num">1.900</td><td>Baja</td><td class="num">$1.815–$7.315</td><td>Reconstruir con intención directa.</td></tr>
+            <tr><td><strong>aviator</strong></td><td class="num">2.900</td><td class="num">2.900</td><td>Media</td><td class="num">$2.687–$11.172</td><td>Propiedad exclusiva de Aviator/Crash.</td></tr>
+            <tr><td><strong>poker online</strong></td><td class="num">1.900</td><td class="num">1.000</td><td>Media</td><td class="num">$2.107–$19.464</td><td>Test de producto con tope.</td></tr>
+            <tr><td><strong>bingo online</strong></td><td class="num">880</td><td class="num">590</td><td>Baja</td><td class="num">$662–$3.484</td><td>Test de producto con tope.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small muted">Los rangos de puja son referencias amplias del mercado, no un CPC pronosticado para BetPlay. Los intervalos atípicos de marca no deben usarse solos para presupuestar.</p>
+    </section>
+
+    <section class="section" id="brechas">
+      <div class="section-heading">
+        <div class="section-number">04 · Cobertura</div>
+        <div>
+          <h2 class="section-title">La demanda existe, pero la cuenta la captura poco o desde la campaña equivocada</h2>
+          <p class="section-intro">
+            Cruce direccional entre el último mes del Planner —junio de 2026— y términos exactos observados en la cuenta
+            entre el 3 de julio y el 1 de agosto. Los periodos difieren y Search Terms aplica umbrales de privacidad.
+          </p>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Término / grupo</th><th class="num">Demanda Planner</th><th class="num">Impresiones cuenta</th><th>Mayor captor actual</th><th>Diagnóstico</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>betplay casino</strong></td><td class="num">90.500</td><td class="num">56.648</td><td>Casino General</td><td><span class="pill good">Buena base</span> con pérdida por ranking.</td></tr>
+            <tr><td><strong>betplay casino en vivo</strong></td><td class="num">18.100</td><td class="num">22.574</td><td><strong>Apuestas</strong></td><td><span class="pill bad">Vertical equivocada</span></td></tr>
+            <tr><td><strong>casino online + plural</strong></td><td class="num">18.100</td><td class="num">301</td><td>Casino General / Slots</td><td><span class="pill bad">Cobertura extremadamente baja</span></td></tr>
+            <tr><td><strong>casino en línea</strong></td><td class="num">1.900</td><td class="num">506</td><td>Casino General</td><td><span class="pill yellow">Cobertura parcial</span></td></tr>
+            <tr><td><strong>ruleta online</strong></td><td class="num">22.200</td><td class="num">111</td><td>Slots</td><td><span class="pill bad">Gran brecha + mala asignación</span></td></tr>
+            <tr><td><strong>ruleta virtual</strong></td><td class="num">14.800</td><td class="num">3</td><td>Casino General</td><td><span class="pill bad">Prácticamente ausente</span></td></tr>
+            <tr><td><strong>slots</strong></td><td class="num">1.900</td><td class="num">4</td><td>Casino General</td><td><span class="pill bad">Sin cobertura directa</span></td></tr>
+            <tr><td><strong>tragamonedas</strong></td><td class="num">880</td><td class="num">176</td><td>Slots</td><td><span class="pill yellow">Cobertura parcial</span></td></tr>
+            <tr><td><strong>aviator</strong></td><td class="num">2.900</td><td class="num">325</td><td><strong>Slots</strong></td><td>Debe ser propiedad de Aviator.</td></tr>
+            <tr><td><strong>poker online</strong></td><td class="num">1.000</td><td class="num">249</td><td><strong>Slots</strong></td><td>Debe ser propiedad de Poker.</td></tr>
+            <tr><td><strong>bingo online</strong></td><td class="num">590</td><td class="num">98</td><td><strong>Slots</strong></td><td>Debe ser propiedad de Bingo.</td></tr>
+            <tr><td><strong>juegos para ganar dinero</strong></td><td class="num">2.900</td><td class="num">658</td><td>Slots</td><td><span class="pill bad">Excluir o aislar</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid-3">
+        <article class="card yellow"><span class="tag">Alta demanda · alta cobertura</span><h3>Marca Casino</h3><p>Defender y mejorar ranking dentro de una campaña de marca-producto, sin contaminar genéricos.</p></article>
+        <article class="card dark"><span class="tag">Alta demanda · baja cobertura</span><h3>Genérico y Ruleta</h3><p>Es la oportunidad incremental más clara. Lanzar con exacta/frase y landing relevante.</p></article>
+        <article class="card"><span class="tag">Cobertura equivocada</span><h3>Productos en Slots</h3><p>Aviator, Poker y Bingo necesitan campañas propietarias y negativas cruzadas.</p></article>
+      </div>
+
+      <div class="callout warning">
+        <strong>Las landings entregan poca señal semántica a Google.</strong>
+        <p>
+          La semilla <strong>/slots</strong> produjo 164 ideas, pero solo una directamente relacionada con Casino/Slots
+          (“betplay slots”, posición 42 por volumen). <strong>/registrarse</strong> generó 168 ideas y ninguna relacionada
+          directamente con Casino. Esto no prueba un problema de Quality Score, pero sí justifica auditar contenido
+          renderizado, títulos, encabezados, canonical, datos estructurados y experiencia del crawler.
+        </p>
+      </div>
+
+      <h3 class="subhead">Experiencia de destino requerida</h3>
+      <div class="funnel">
+        <article class="funnel-step"><span>01 · Relevancia</span><strong>Keyword → anuncio</strong><p>Mensaje específico por intención y producto, sin mezclar verticales.</p></article>
+        <article class="funnel-step"><span>02 · Contexto</span><strong>Anuncio → landing</strong><p>Catálogo, producto, confianza, legalidad y beneficios visibles en HTML.</p></article>
+        <article class="funnel-step"><span>03 · Acción</span><strong>Registro → depósito</strong><p>Flujo móvil corto, verificable y medido por paso.</p></article>
+      </div>
+      <ul class="list list-check">
+        <li>Hub de Casino para intención genérica y marca-producto.</li>
+        <li>Landing de Ruleta/mesas live y landing dedicada de Aviator/Crash.</li>
+        <li>Catálogo de Slots con juegos relevantes y CTA progresivo.</li>
+        <li>UTM coherentes por canal, vertical, producto, intención y experimento.</li>
+        <li>Mensajes de juego responsable, mayoría de edad, licencia y términos claros de promociones.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="estructura">
+      <div class="section-heading">
+        <div class="section-number">05 · Estructura</div>
+        <div>
+          <h2 class="section-title">Ocho campañas, ocho funciones medibles</h2>
+          <p class="section-intro">
+            Search debe organizarse por intención y producto. El principio es simple: cada búsqueda tiene un dueño,
+            una landing congruente, un presupuesto y una regla de escala.
+          </p>
+        </div>
+      </div>
+
+      <div class="campaign-grid">
+        <article class="campaign featured"><span class="code">S · CAS · 01</span><h3>Marca-producto</h3><p>BetPlay + casino, slots o ruleta. Exacta/frase. Hub Casino o producto.</p></article>
+        <article class="campaign featured"><span class="code">S · CAS · 02</span><h3>Genérico core</h3><p>Casino online, casino en vivo. Exacta/frase. Hub Casino.</p></article>
+        <article class="campaign"><span class="code">S · CAS · 03</span><h3>Slots</h3><p>Slots y tragamonedas con intención real. Landing /slots optimizada.</p></article>
+        <article class="campaign featured"><span class="code">S · CAS · 04</span><h3>Live y mesas</h3><p>Ruleta, blackjack y baccarat. Landing específica live/mesas.</p></article>
+        <article class="campaign"><span class="code">S · CAS · 05</span><h3>Aviator / Crash</h3><p>Aviator, Crash y variantes propias. Landing dedicada.</p></article>
+        <article class="campaign"><span class="code">S · CAS · 06</span><h3>Poker / Bingo · Test</h3><p>Productos específicos. Exacta/frase y tope de prueba.</p></article>
+        <article class="campaign"><span class="code">S · CAS · 07</span><h3>Competencia · Test</h3><p>Marcas aprobadas. Máximo 5% del presupuesto Casino.</p></article>
+        <article class="campaign"><span class="code">S · CAS · 08</span><h3>Broad · Experimento</h3><p>Genéricos seleccionados. Proxy estable, BI y presupuesto propio.</p></article>
+      </div>
+
+      <h3 class="subhead">Reglas de propiedad</h3>
+      <div class="grid-2">
+        <ul class="list">
+          <li>Marca general conserva BetPlay puro, login y navegación.</li>
+          <li>Marca-producto es dueña de BetPlay + Casino; los genéricos niegan marca.</li>
+          <li>Slots no captura Aviator, Poker, Bingo, ruleta ni búsquedas deportivas.</li>
+          <li>Competidores salen de producto y entran en un test aislado.</li>
+        </ul>
+        <ul class="list">
+          <li>Listas independientes: competencia, lotería/chance, soporte, empleo, gratis/dinero y Deportes.</li>
+          <li>Broad no comparte presupuesto con exacta/frase y tiene techo inicial de 10% de Casino.</li>
+          <li>PMax no es la primera vía de expansión; requiere marca y URLs controladas.</li>
+          <li>Revisión humana semanal evita bloquear búsquedas valiosas.</li>
+        </ul>
+      </div>
+
+      <h3 class="subhead">Puja recomendada</h3>
+      <div class="grid-3">
+        <article class="card"><span class="tag">Inicio</span><h3>Maximizar conversiones</h3><p>Usar un solo proxy limpio y comparable en la nueva estructura exacta/frase.</p></article>
+        <article class="card"><span class="tag">Estabilización</span><h3>Agregar tCPA</h3><p>Solo cuando exista volumen suficiente y BI confirme relación con CPA FTD.</p></article>
+        <article class="card"><span class="tag">Evitar</span><h3>Valor artificial</h3><p>No usar Maximize Conversion Value si el valor fijo de registro no representa calidad real.</p></article>
+      </div>
+
+      <div class="callout warning">
+        <strong>Dos correcciones antes de escalar.</strong>
+        <p>Casino General no debe conservar tROAS de 2.500% basado en un valor fijo de registro. Aviator debe limitarse hasta retirar la mezcla de objetivos y sanear sus búsquedas.</p>
+      </div>
+    </section>
+
+    <section class="section" id="inversion">
+      <div class="section-heading">
+        <div class="section-number">06 · Inversión</div>
+        <div>
+          <h2 class="section-title">Prioridad presupuestaria por etapas</h2>
+          <p class="section-intro">
+            La métrica de prioridad es gasto efectivo con tráfico calificado y FTD validado por negocio, no presupuesto
+            nominal disponible en la interfaz.
+          </p>
+        </div>
+      </div>
+
+      <h3 class="subhead" style="margin-top:0">Distribución inicial dentro de Casino</h3>
+      <div class="allocation" aria-label="Distribución interna propuesta">
+        <span class="a1" style="width:30%">30%</span>
+        <span class="a2" style="width:25%">25%</span>
+        <span class="a3" style="width:25%">25%</span>
+        <span class="a4" style="width:10%">10%</span>
+        <span class="a5" style="width:5%">5%</span>
+        <span class="a6" style="width:5%">5%</span>
+      </div>
+      <div class="legend">
+        <span><i style="background:#111"></i>Marca-producto</span>
+        <span><i style="background:#ffc000"></i>Genérico + live</span>
+        <span><i style="background:#ffdc70"></i>Slots</span>
+        <span><i style="background:#d8d8d8"></i>Aviator / Crash</span>
+        <span><i style="background:#b8b8b8"></i>Poker / Bingo</span>
+        <span><i style="background:#777"></i>Competencia + experimentos</span>
+      </div>
+
+      <div class="timeline">
+        <article class="phase">
+          <div class="phase-number">1</div>
+          <h3>Control y relanzamiento</h3>
+          <p class="small muted">Semanas 1–4 · Objetivo: Casino a 30% del gasto efectivo.</p>
+          <ul>
+            <li>Proteger pisos de Marca y Deportes.</li>
+            <li>Recuperar fugas de Slots/Aviator.</li>
+            <li>Usar campañas sin entrega y medios sin calidad.</li>
+            <li>Sumar presupuesto incremental cuando sea necesario.</li>
+          </ul>
+        </article>
+        <article class="phase">
+          <div class="phase-number">2</div>
+          <h3>Escala condicionada</h3>
+          <p class="small muted">Semanas 5–8 · Objetivo potencial: 35%.</p>
+          <ul>
+            <li>Solo si CPA FTD queda dentro de 120% de la meta.</li>
+            <li>Evitar que marca haga parecer eficiente al conjunto.</li>
+            <li>Subir 15–20% cada 3–4 días.</li>
+            <li>Reducir si gasta 1,5–2 CPA objetivo sin FTD.</li>
+          </ul>
+        </article>
+        <article class="phase">
+          <div class="phase-number">3</div>
+          <h3>Crecimiento</h3>
+          <p class="small">Semanas 9–12 · Considerar hasta 40%.</p>
+          <ul>
+            <li>Requiere CPA FTD y D30 NGR positivos.</li>
+            <li>Exige evidencia de incrementalidad.</li>
+            <li>Marca y Deportes mantienen volumen eficiente.</li>
+            <li>Ampliar Broad y medios solo por cohorte ganadora.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="medios">
+      <div class="section-heading">
+        <div class="section-number">07 · Medios</div>
+        <div>
+          <h2 class="section-title">Google lidera; social y programática construyen demanda incremental</h2>
+          <p class="section-intro">
+            El piloto conserva 85% del presupuesto incremental dentro de Google. Los demás canales solo crecen cuando
+            una prueba geo/temporal demuestra aporte adicional y BI confirma calidad, no por conversiones post-view.
+          </p>
+        </div>
+      </div>
+
+      <div class="allocation" aria-label="Distribución por canal">
+        <span class="a1" style="width:75%">Google Search · 75%</span>
+        <span class="a2" style="width:10%">10%</span>
+        <span class="a3" style="width:10%">10%</span>
+        <span class="a6" style="width:5%">5%</span>
+      </div>
+      <div class="legend">
+        <span><i style="background:#111"></i>Google Search · captura</span>
+        <span><i style="background:#ffc000"></i>YouTube / Demand Gen · construcción</span>
+        <span><i style="background:#ffdc70"></i>Social aprobado · descubrimiento</span>
+        <span><i style="background:#777"></i>Programática · alcance incremental</span>
+      </div>
+
+      <div class="grid-3">
+        <article class="card dark">
+          <span class="tag">Search · 75%</span>
+          <h3>Capturar intención</h3>
+          <p>Marca-producto, genérico y productos con mensajes y landings congruentes.</p>
+        </article>
+        <article class="card yellow">
+          <span class="tag">Google video · 10%</span>
+          <h3>Crear demanda</h3>
+          <p>YouTube/Demand Gen para catálogo, confianza, producto y aprendizaje creativo.</p>
+        </article>
+        <article class="card">
+          <span class="tag">Social + programática · 15%</span>
+          <h3>Probar incrementalidad</h3>
+          <p>Audiencias adultas aprobadas, inventario controlado, frecuencia y brand safety.</p>
+        </article>
+      </div>
+
+      <h3 class="subhead">Condiciones mínimas fuera de Search</h3>
+      <div class="grid-2">
+        <ul class="list list-check">
+          <li>Permiso escrito de plataforma, cuenta, dominio, licencia, país y edad.</li>
+          <li>Colombia, mayoría de edad y exclusión de perfiles definidos por juego responsable.</li>
+          <li>Creatividad y landing del mismo producto; sin promesas de dinero fácil.</li>
+          <li>Medición con proxy limpio y deduplicado cuando la plataforma lo permita.</li>
+        </ul>
+        <ul class="list list-check">
+          <li>Programática con acuerdos directos o inventario whitelisted al inicio.</li>
+          <li>Contexto permitido, límites de frecuencia, viewability e IVT/fraude.</li>
+          <li>Brand lift, búsqueda de marca y FTD por región como lectura conjunta.</li>
+          <li>Pruebas con celdas de control; no optimizar únicamente a post-view.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="roadmap">
+      <div class="section-heading">
+        <div class="section-number">08 · 90 días</div>
+        <div>
+          <h2 class="section-title">De control operativo a crecimiento comprobado</h2>
+          <p class="section-intro">La secuencia minimiza contaminación de datos: primero propiedad y calidad, después aprendizaje y finalmente escala.</p>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <article class="phase">
+          <div class="phase-number">0–30</div>
+          <h3>Sanear y relanzar</h3>
+          <ul>
+            <li>Alinear proxy primario entre campañas.</li>
+            <li>Corregir geografía, UTM, naming y URLs.</li>
+            <li>Ampliar negativas por taxonomía.</li>
+            <li>Crear Marca-producto, Genérico y Ruleta/Live.</li>
+            <li>Reconstruir Slots y limitar Aviator.</li>
+            <li>Definir tablero semanal Google + BI.</li>
+          </ul>
+        </article>
+        <article class="phase">
+          <div class="phase-number">31–60</div>
+          <h3>Aprender y redistribuir</h3>
+          <ul>
+            <li>Medir cobertura y términos por propietario.</li>
+            <li>Probar hub Casino vs /registrarse.</li>
+            <li>Probar landing Ruleta y Aviator.</li>
+            <li>Activar competencia con techo de 5%.</li>
+            <li>Aplicar tCPA solo donde haya estabilidad.</li>
+            <li>Llegar a 35% si BI valida calidad.</li>
+          </ul>
+        </article>
+        <article class="phase">
+          <div class="phase-number">61–90</div>
+          <h3>Escalar ganadores</h3>
+          <ul>
+            <li>Abrir Broad como experimento aislado.</li>
+            <li>Evaluar YouTube/Demand Gen incremental.</li>
+            <li>Activar piloto social/programático aprobado.</li>
+            <li>Regionalizar demanda en plazas prioritarias.</li>
+            <li>Profundizar universo completo de 5.372 ideas.</li>
+            <li>Escalar solo cohortes con FTD y valor positivo.</li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 class="subhead">Backlog de análisis para la siguiente iteración</h3>
+      <div class="grid-3">
+        <article class="card"><span class="tag">Taxonomía</span><h3>Depurar las 5.372 ideas</h3><p>Clúster, intención, volumen, tendencia, competencia, puja, cobertura y acción: activar, mantener, aislar o negar.</p></article>
+        <article class="card"><span class="tag">Geografía</span><h3>Repetir Planner por región</h3><p>Bogotá, Antioquia, Valle, Atlántico y plazas prioritarias, cruzadas con calidad real de cuenta.</p></article>
+        <article class="card"><span class="tag">Escenarios</span><h3>Pronosticar inversión</h3><p>Conservador exacta/frase; base con genérico/productos; crecimiento con Broad, competencia y otros medios.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="medicion">
+      <div class="section-heading">
+        <div class="section-number">09 · Medición</div>
+        <div>
+          <h2 class="section-title">Gobierno práctico mientras FTD permanece fuera de plataforma</h2>
+          <p class="section-intro">
+            La cuenta puede avanzar sin esperar una solución tecnológica completa. Google optimiza al proxy más consistente;
+            BI valida calidad, FTD y economía para autorizar presupuesto.
+          </p>
+        </div>
+      </div>
+
+      <div class="funnel">
+        <article class="funnel-step"><span>Plataforma</span><strong>Proxy limpio</strong><p>Un solo registro exitoso comparable entre Marca, Deportes y Casino.</p></article>
+        <article class="funnel-step"><span>Validación semanal</span><strong>FTD + CPA FTD</strong><p>Tabla por campaña, producto, inversión y tasa proxy → FTD.</p></article>
+        <article class="funnel-step"><span>Decisión</span><strong>Escalar o detener</strong><p>Ventanas de 14–30 días, no la columna de conversiones aislada.</p></article>
+      </div>
+
+      <div class="kpi-grid">
+        <article class="kpi"><span>Entrega</span><strong>Gasto efectivo y cuota de impresiones</strong></article>
+        <article class="kpi"><span>Tráfico</span><strong>Mix core, CPC, CTR y términos</strong></article>
+        <article class="kpi"><span>Proxy</span><strong>Registro y costo por registro</strong></article>
+        <article class="kpi"><span>Negocio</span><strong>FTD, CPA FTD y proxy → FTD</strong></article>
+        <article class="kpi"><span>Valor</span><strong>NGR D30 o calidad posterior</strong></article>
+        <article class="kpi"><span>Landing</span><strong>CVR móvil y errores por paso</strong></article>
+        <article class="kpi"><span>Control</span><strong>Marca vs no marca y producto</strong></article>
+        <article class="kpi"><span>Incrementalidad</span><strong>Lift geo/temporal por canal</strong></article>
+      </div>
+
+      <div class="callout warning">
+        <strong>No comparar Aviator y eSports con el resto mientras incluyan PURCHASE como objetivo primario.</strong>
+        <p>El volumen repetido produce una señal artificialmente superior. Login, descargas y compras repetidas deben quedar en observación cuando distorsionen la puja.</p>
+      </div>
+
+      <details>
+        <summary>Qué no puede asegurar hoy la conversión de Google</summary>
+        <div>No existe una acción que garantice al mismo tiempo usuario nuevo, primer depósito real, deduplicación única, clasificación Casino vs Deportes y valor económico útil para puja.</div>
+      </details>
+      <details>
+        <summary>Cuándo revisar una integración offline de FTD</summary>
+        <div>Después de estabilizar estructura y proxy, y solo si el costo y viabilidad justifican el esfuerzo. Es una mejora incremental, no parte del camino crítico de las primeras ocho semanas.</div>
+      </details>
+    </section>
+
+    <section class="section" id="fuentes">
+      <div class="section-heading">
+        <div class="section-number">10 · Fuentes</div>
+        <div>
+          <h2 class="section-title">Datos, supuestos y límites</h2>
+          <p class="section-intro">Este reporte integra la estrategia de cuenta y el análisis de demanda elaborados el 2 de agosto de 2026.</p>
+        </div>
+      </div>
+
+      <div class="sources">
+        <article class="source">
+          <strong>Google Ads API · cuenta BetPlay</strong>
+          <p>Cuenta BRAND 2023 - BETPLAY 2020, customer ID 714-286-4193. Campañas, inversión, clics, conversiones, cuota, términos, configuración, objetivos y URLs.</p>
+        </article>
+        <article class="source">
+          <strong>Keyword Planner API</strong>
+          <p>5.372 ideas desde 11 semillas; Colombia, español y Google Search. Series y estimaciones disponibles hasta junio de 2026.</p>
+          <a href="https://ads.google.com/home/tools/keyword-planner/" target="_blank" rel="noopener">Acerca del Planificador →</a>
+        </article>
+        <article class="source">
+          <strong>Políticas de juegos de apuestas</strong>
+          <p>La activación debe conservar certificación, restricción territorial, mayoría de edad y mensajes de juego responsable.</p>
+          <a href="https://support.google.com/adspolicy/answer/6018017?hl=es" target="_blank" rel="noopener">Política de Google Ads →</a>
+        </article>
+        <article class="source">
+          <strong>Limitaciones metodológicas</strong>
+          <p>Planner redondea y agrupa variantes; Search Terms aplica umbrales. Las comparaciones no son experimentos causales y los registros GA4 no equivalen a FTD.</p>
+        </article>
+      </div>
+
+      <div class="callout">
+        <strong>Alcance del documento</strong>
+        <p>Es una propuesta estratégica basada en lectura de datos. No se aplicaron cambios en Google Ads, redes sociales, programática ni activos web.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div class="footer-inner">
+      <span>BetPlay · Estrategia integrada de crecimiento Casino · Versión 1.0</span>
+      <span>Preparado con datos cerrados al 1 de agosto de 2026</span>
+    </div>
+  </footer>
+
+  <script>
+    const navLinks = [...document.querySelectorAll('.nav a')];
+    const sections = navLinks
+      .map(link => document.querySelector(link.getAttribute('href')))
+      .filter(Boolean);
+
+    const observer = new IntersectionObserver(entries => {
+      const visible = entries
+        .filter(entry => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (!visible) return;
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${visible.target.id}`);
+      });
+    }, { rootMargin: '-18% 0px -68% 0px', threshold: [0, .2, .5] });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
