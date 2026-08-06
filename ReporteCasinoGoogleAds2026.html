@@ -193,6 +193,43 @@
     .funnel-step p { margin: 8px 0 0; color: var(--gray-700); font-size: .78rem; }
     .funnel-step:nth-child(3) p { color: rgba(255,255,255,.7); }
 
+    .journey { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin: 24px 0; }
+    .journey-step { position: relative; min-height: 225px; padding: 22px 20px; border: 1px solid var(--gray-200); border-radius: 18px; background: var(--white); }
+    .journey-step::after { content: "→"; position: absolute; top: 50%; right: -19px; z-index: 2; display: grid; place-items: center; width: 25px; height: 25px; border-radius: 50%; color: var(--black); background: var(--yellow); font-weight: 800; transform: translateY(-50%); }
+    .journey-step:last-child::after { display: none; }
+    .journey-step:nth-child(2), .journey-step:nth-child(3) { background: var(--yellow-soft); }
+    .journey-step:nth-child(4) { border-color: var(--yellow); }
+    .journey-step:nth-child(5) { color: var(--white); background: var(--black); border-color: var(--black); }
+    .journey-step .stage { display: block; margin-bottom: 13px; color: var(--gray-500); font-size: .66rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .journey-step:nth-child(5) .stage { color: var(--yellow); }
+    .journey-step h3 { min-height: 45px; font-size: .98rem; }
+    .journey-step p { margin: 10px 0 0; color: var(--gray-700); font-size: .75rem; }
+    .journey-step:nth-child(5) p { color: rgba(255,255,255,.72); }
+    .journey-step .owner { display: inline-block; margin-top: 14px; padding: 5px 8px; border-radius: 999px; background: var(--gray-100); font-size: .62rem; font-weight: 700; }
+    .journey-step:nth-child(5) .owner { color: var(--black); background: var(--yellow); }
+
+    .slot-demo { display: grid; grid-template-columns: minmax(0, .85fr) minmax(320px, 1.15fr); gap: 24px; align-items: center; margin: 24px 0; padding: clamp(24px, 4vw, 42px); border-radius: 24px; color: var(--white); background: radial-gradient(circle at top right, rgba(255,192,0,.23), transparent 38%), var(--black); }
+    .slot-copy .tag { display: inline-block; margin-bottom: 15px; padding: 6px 10px; border-radius: 999px; color: var(--black); background: var(--yellow); font-size: .68rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
+    .slot-copy h3 { font-size: clamp(1.6rem, 3vw, 2.7rem); letter-spacing: -.035em; }
+    .slot-copy p { margin: 13px 0 0; color: rgba(255,255,255,.72); font-size: .88rem; }
+    .slot-machine { padding: 18px; border: 1px solid rgba(255,255,255,.16); border-radius: 22px; background: rgba(255,255,255,.07); text-align: center; }
+    .slot-brand { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 14px; font-size: .72rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+    .slot-brand span:last-child { color: var(--yellow); }
+    .slot-reels { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+    .slot-reel { display: grid; place-items: center; min-height: 112px; overflow: hidden; border: 3px solid var(--yellow); border-radius: 16px; color: var(--black); background: var(--white); font-size: clamp(2.25rem, 5vw, 4rem); line-height: 1; }
+    .slot-reel.spinning { animation: slotPulse .18s linear infinite alternate; }
+    @keyframes slotPulse { from { transform: translateY(-3px); filter: blur(1px); } to { transform: translateY(3px); filter: blur(0); } }
+    .slot-action { width: 100%; margin-top: 14px; padding: 13px 18px; border: 0; border-radius: 999px; color: var(--black); background: var(--yellow); font: inherit; font-weight: 800; cursor: pointer; }
+    .slot-action:disabled { cursor: wait; opacity: .65; }
+    .slot-result { min-height: 24px; margin: 12px 0 0; color: var(--yellow); font-size: .8rem; font-weight: 700; }
+    .slot-legal { display: block; margin-top: 9px; color: rgba(255,255,255,.55); font-size: .63rem; line-height: 1.4; }
+
+    .push-preview { display: grid; gap: 10px; margin-top: 16px; }
+    .push-item { display: grid; grid-template-columns: 42px minmax(0, 1fr); gap: 12px; align-items: start; padding: 15px; border: 1px solid var(--gray-200); border-radius: 16px; background: var(--white); box-shadow: 0 8px 24px rgba(0,0,0,.06); }
+    .push-icon { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 11px; background: var(--yellow); font-size: 1.15rem; }
+    .push-item strong { display: block; font-size: .83rem; }
+    .push-item p { margin: 4px 0 0; color: var(--gray-700); font-size: .74rem; line-height: 1.45; }
+
     .campaign-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 20px; }
     .campaign { padding: 20px; border: 1px solid var(--gray-200); border-radius: 17px; }
     .campaign .code { display: inline-block; margin-bottom: 14px; color: var(--gray-500); font-size: .66rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
@@ -243,9 +280,12 @@
 
     @media (max-width: 1060px) {
       .stats, .campaign-grid, .kpi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .journey { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .journey-step::after { display: none; }
       .grid-3 { grid-template-columns: 1fr; }
       .section-heading { grid-template-columns: 1fr; gap: 8px; }
       .decision { grid-template-columns: 1fr; }
+      .slot-demo { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 760px) {
@@ -254,7 +294,7 @@
       h1 { font-size: clamp(2.15rem, 10vw, 3.2rem); }
       .nav-wrap { top: 6px; }
       .section { padding: 25px 20px; border-radius: 22px; }
-      .stats, .grid-2, .campaign-grid, .timeline, .kpi-grid, .sources, .funnel { grid-template-columns: 1fr; }
+      .stats, .grid-2, .campaign-grid, .timeline, .kpi-grid, .sources, .funnel, .journey { grid-template-columns: 1fr; }
       .bar-row { grid-template-columns: 115px 1fr 68px; gap: 8px; }
       .footer-inner { flex-direction: column; }
       .decision-side { min-height: 230px; }
@@ -276,11 +316,11 @@
       <div class="eyebrow">BetPlay · Casino · Google Ads</div>
       <h1>Estrategia de crecimiento Casino</h1>
       <p class="hero-lead">
-        Un reporte integrado para convertir la prioridad de Casino en captura real de demanda: diagnóstico de la cuenta,
+        Un reporte integrado para convertir la prioridad de Casino en captura real de demanda: lectura de oportunidades,
         5.372 ideas del Planificador de Palabras Clave, estructura objetivo y plan de activación de 90 días.
       </p>
       <div class="hero-meta">
-        <span>Versión 1.1</span>
+        <span>Versión 1.5</span>
         <span>Análisis: 2 de agosto de 2026</span>
         <span>Datos cerrados: 1 de agosto de 2026</span>
         <span>Moneda: COP</span>
@@ -292,13 +332,13 @@
   <div class="container nav-wrap" aria-label="Navegación del reporte">
     <nav class="nav">
       <a href="#resumen">Resumen</a>
-      <a href="#diagnostico">Cuenta</a>
       <a href="#demanda">Demanda</a>
       <a href="#brechas">Cobertura</a>
       <a href="#estructura">Estructura</a>
       <a href="#inversion">Inversión</a>
       <a href="#medios">Medios</a>
       <a href="#programatica">Programática</a>
+      <a href="#social">Redes</a>
       <a href="#contenido">Contenido</a>
       <a href="#roadmap">90 días</a>
       <a href="#medicion">Medición</a>
@@ -377,9 +417,9 @@
           <p>Conservar sus pisos eficientes y evitar que el crecimiento de Casino dependa de recortes que destruyan FTD rentable.</p>
         </article>
         <article class="card yellow">
-          <span class="tag">Corregir</span>
+          <span class="tag">Potenciar</span>
           <h3>Search de Casino</h3>
-          <p>Separar marca-producto, genérico, ruleta/live, Slots, Aviator, Poker/Bingo, competencia y Broad experimental.</p>
+          <p>Dar espacio propio a marca-producto, genérico, ruleta/live, Slots, Aviator, Poker/Bingo, competencia y Broad experimental.</p>
         </article>
         <article class="card dark">
           <span class="tag">Escalar</span>
@@ -389,132 +429,9 @@
       </div>
     </section>
 
-    <section class="section" id="diagnostico">
-      <div class="section-heading">
-        <div class="section-number">02 · Cuenta</div>
-        <div>
-          <h2 class="section-title">Qué muestran los últimos 30 días</h2>
-          <p class="section-intro">
-            Ventana principal: 3 de julio al 1 de agosto de 2026. Los registros son eventos GA4 atribuidos, no FTD;
-            sirven como proxy táctico dentro de Google, mientras el dato de negocio gobierna las decisiones de escala.
-          </p>
-        </div>
-      </div>
-
-      <h3 class="subhead">Lectura por grupo operativo</h3>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Grupo</th>
-              <th class="num">Inversión</th>
-              <th class="num">Clics</th>
-              <th class="num">Registro GA4</th>
-              <th class="num">Costo / registro</th>
-              <th>Rol en la estrategia</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td><strong>Marca</strong></td><td class="num">$223,7 M</td><td class="num">1.212.533</td><td class="num">24.367</td><td class="num">$9.180</td><td><span class="pill good">Proteger</span></td></tr>
-            <tr><td><strong>Deportes</strong></td><td class="num">$149,4 M</td><td class="num">260.852</td><td class="num">2.023</td><td class="num">$73.819</td><td><span class="pill good">Proteger</span></td></tr>
-            <tr><td><strong>Casino</strong></td><td class="num">$115,3 M</td><td class="num">151.998</td><td class="num">1.683</td><td class="num">$68.525</td><td><span class="pill yellow">Reestructurar</span></td></tr>
-            <tr><td><strong>PMax general</strong></td><td class="num">$12,7 M</td><td class="num">176.020</td><td class="num">1.332</td><td class="num">$9.498</td><td><span class="pill">Validar calidad</span></td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="small muted">Marca y Deportes son más eficientes en FTD según el dato de negocio disponible, aunque el proxy GA4 no refleje esa jerarquía.</p>
-
-      <h3 class="subhead">Campañas activas de Casino</h3>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Campaña</th>
-              <th class="num">Inversión 30d</th>
-              <th class="num">Presupuesto / día</th>
-              <th class="num">Conv. Google</th>
-              <th class="num">Reg. GA4</th>
-              <th class="num">Costo / reg.</th>
-              <th class="num">Cuota imp.</th>
-              <th class="num">Pérdida presupuesto</th>
-              <th class="num">Pérdida ranking</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td><strong>Slots</strong></td><td class="num">$105,5 M</td><td class="num">$1,8 M</td><td class="num">3.020</td><td class="num">1.001</td><td class="num">$105.414</td><td class="num">29,5%</td><td class="num">23,1%</td><td class="num">47,5%</td></tr>
-            <tr><td><strong>Casino General</strong></td><td class="num">$5,5 M</td><td class="num">$7,0 M</td><td class="num">2.055</td><td class="num">676</td><td class="num">$8.189</td><td class="num">56,2%</td><td class="num">1,3%</td><td class="num">42,5%</td></tr>
-            <tr><td><strong>Aviator</strong></td><td class="num">$4,3 M</td><td class="num">$0,1 M</td><td class="num">11.068</td><td class="num">6</td><td class="num">$717.514</td><td class="num">17,4%</td><td class="num">82,3%</td><td class="num">0,3%</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="grid-3">
-        <article class="card">
-          <span class="tag">Slots</span>
-          <h3>91,5% del gasto de Casino</h3>
-          <p>Un solo grupo de anuncios y concordancia amplia convirtieron la campaña en recolectora de toda la categoría.</p>
-        </article>
-        <article class="card">
-          <span class="tag">Casino General</span>
-          <h3>No está limitada por presupuesto</h3>
-          <p>Solo pierde 1,3% por presupuesto. Ranking, tROAS de 2.500% y volumen elegible pesan más.</p>
-        </article>
-        <article class="card">
-          <span class="tag">Aviator</span>
-          <h3>Señal de conversión distorsionada</h3>
-          <p>Las 11.068 conversiones incluyen cerca de 10.992 compras repetidas; no son comparables con registros.</p>
-        </article>
-      </div>
-
-      <h3 class="subhead">Dónde se fue la inversión visible de Slots</h3>
-      <div class="grid-2">
-        <div>
-          <div class="bars">
-            <div class="bar-row"><span class="bar-label">Competidores</span><span class="bar-track"><span class="bar-fill" style="display:block;width:100%"></span></span><span class="bar-value">$33,6 M</span></div>
-            <div class="bar-row"><span class="bar-label">Otros</span><span class="bar-track"><span class="bar-fill" style="display:block;width:47%"></span></span><span class="bar-value">$15,8 M</span></div>
-            <div class="bar-row"><span class="bar-label">Lotería / chance</span><span class="bar-track"><span class="bar-fill" style="display:block;width:25%"></span></span><span class="bar-value">$8,4 M</span></div>
-            <div class="bar-row"><span class="bar-label">Marca BetPlay</span><span class="bar-track"><span class="bar-fill" style="display:block;width:22%"></span></span><span class="bar-value">$7,3 M</span></div>
-            <div class="bar-row"><span class="bar-label">Genérico Casino</span><span class="bar-track"><span class="bar-fill" style="display:block;width:22%"></span></span><span class="bar-value">$7,3 M</span></div>
-            <div class="bar-row"><span class="bar-label">Soporte / cuenta</span><span class="bar-track"><span class="bar-fill" style="display:block;width:19%"></span></span><span class="bar-value">$6,4 M</span></div>
-            <div class="bar-row"><span class="bar-label">Gratis / dinero</span><span class="bar-track"><span class="bar-fill" style="display:block;width:19%"></span></span><span class="bar-value">$6,3 M</span></div>
-          </div>
-        </div>
-        <article class="card yellow">
-          <span class="tag">Lectura operativa</span>
-          <h3>$62,0 M necesitan dueño y regla propios</h3>
-          <p>
-            No todo es desperdicio: marca y algunos competidores pueden convertir. El problema es que hoy no pueden medirse
-            ni controlarse por separado. Las mayores aperturas provinieron de <strong>juegos de apuestas online</strong>
-            ($47,4 M), <strong>tragaperras</strong> ($16,2 M), <strong>tragamonedas</strong> ($10,2 M) y <strong>slot</strong> ($7,5 M).
-          </p>
-        </article>
-      </div>
-
-      <div class="callout success">
-        <strong>La lista de negativas del 28 de julio ya produjo una señal positiva.</strong>
-        <p>
-          En Slots, el gasto clasificado como competencia bajó de $3,38 M en los cinco días previos a $1,01 M en los cinco
-          posteriores. Aún faltan categorías como bplay, betano, betsson, 1xbet, soporte, “ganar dinero” y loterías.
-        </p>
-      </div>
-
-      <div class="grid-2">
-        <article class="card">
-          <span class="tag">Geografía</span>
-          <h3>Usar presencia física en Colombia</h3>
-          <p>Slots y Aviator operan con “presencia o interés”. Deben pasar a presencia para elevar calidad y fortalecer el control de cumplimiento.</p>
-        </article>
-        <article class="card">
-          <span class="tag">Experiencia</span>
-          <h3>Diseñar mobile first</h3>
-          <p>Entre 85% y 91% del gasto de Casino proviene de móvil. Landing, registro, verificación y depósito deben evaluarse primero allí.</p>
-        </article>
-      </div>
-    </section>
-
     <section class="section" id="demanda">
       <div class="section-heading">
-        <div class="section-number">03 · Demanda</div>
+        <div class="section-number">02 · Demanda</div>
         <div>
           <h2 class="section-title">Cómo busca Colombia la categoría Casino</h2>
           <p class="section-intro">
@@ -593,9 +510,9 @@
 
     <section class="section" id="brechas">
       <div class="section-heading">
-        <div class="section-number">04 · Cobertura</div>
+        <div class="section-number">03 · Cobertura</div>
         <div>
-          <h2 class="section-title">La demanda existe, pero la cuenta la captura poco o desde la campaña equivocada</h2>
+          <h2 class="section-title">La demanda disponible abre nuevas rutas de cobertura y crecimiento</h2>
           <p class="section-intro">
             Cruce direccional entre el último mes del Planner —junio de 2026— y términos exactos observados en la cuenta
             entre el 3 de julio y el 1 de agosto. Los periodos difieren y Search Terms aplica umbrales de privacidad.
@@ -606,7 +523,7 @@
       <div class="table-wrap">
         <table>
           <thead>
-            <tr><th>Término / grupo</th><th class="num">Demanda Planner</th><th class="num">Impresiones cuenta</th><th>Mayor captor actual</th><th>Diagnóstico</th></tr>
+            <tr><th>Término / grupo</th><th class="num">Demanda Planner</th><th class="num">Impresiones observadas</th><th>Mayor captor actual</th><th>Oportunidad</th></tr>
           </thead>
           <tbody>
             <tr><td><strong>betplay casino</strong></td><td class="num">90.500</td><td class="num">56.648</td><td>Casino General</td><td><span class="pill good">Buena base</span> con pérdida por ranking.</td></tr>
@@ -628,7 +545,7 @@
       <div class="grid-3">
         <article class="card yellow"><span class="tag">Alta demanda · alta cobertura</span><h3>Marca Casino</h3><p>Defender y mejorar ranking dentro de una campaña de marca-producto, sin contaminar genéricos.</p></article>
         <article class="card dark"><span class="tag">Alta demanda · baja cobertura</span><h3>Genérico y Ruleta</h3><p>Es la oportunidad incremental más clara. Lanzar con exacta/frase y landing relevante.</p></article>
-        <article class="card"><span class="tag">Cobertura equivocada</span><h3>Productos en Slots</h3><p>Aviator, Poker y Bingo necesitan campañas propietarias y negativas cruzadas.</p></article>
+        <article class="card"><span class="tag">Oportunidad de propiedad</span><h3>Productos con espacio propio</h3><p>Aviator, Poker y Bingo pueden ganar claridad con campañas propietarias y reglas cruzadas.</p></article>
       </div>
 
       <div class="callout warning">
@@ -636,7 +553,7 @@
         <p>
           La semilla <strong>/slots</strong> produjo 164 ideas, pero solo una directamente relacionada con Casino/Slots
           (“betplay slots”, posición 42 por volumen). <strong>/registrarse</strong> generó 168 ideas y ninguna relacionada
-          directamente con Casino. Esto no prueba un problema de Quality Score, pero sí justifica auditar contenido
+          directamente con Casino. Este resultado abre la oportunidad de fortalecer el contenido
           renderizado, títulos, encabezados, canonical, datos estructurados y experiencia del crawler.
         </p>
       </div>
@@ -658,7 +575,7 @@
 
     <section class="section" id="estructura">
       <div class="section-heading">
-        <div class="section-number">05 · Estructura</div>
+        <div class="section-number">04 · Estructura</div>
         <div>
           <h2 class="section-title">Ocho campañas, ocho funciones medibles</h2>
           <p class="section-intro">
@@ -703,14 +620,14 @@
       </div>
 
       <div class="callout warning">
-        <strong>Dos correcciones antes de escalar.</strong>
-        <p>Casino General no debe conservar tROAS de 2.500% basado en un valor fijo de registro. Aviator debe limitarse hasta retirar la mezcla de objetivos y sanear sus búsquedas.</p>
+        <strong>Dos habilitadores antes de escalar.</strong>
+        <p>Casino General puede evolucionar desde el tROAS basado en valor fijo hacia una señal comparable de negocio. Aviator puede crecer después de separar objetivos y consolidar búsquedas propias.</p>
       </div>
     </section>
 
     <section class="section" id="inversion">
       <div class="section-heading">
-        <div class="section-number">06 · Inversión</div>
+        <div class="section-number">05 · Inversión</div>
         <div>
           <h2 class="section-title">Prioridad presupuestaria por etapas</h2>
           <p class="section-intro">
@@ -745,7 +662,7 @@
           <p class="small muted">Semanas 1–4 · Objetivo: Casino a 30% del gasto efectivo.</p>
           <ul>
             <li>Proteger pisos de Marca y Deportes.</li>
-            <li>Recuperar fugas de Slots/Aviator.</li>
+            <li>Redistribuir oportunidades de Slots/Aviator.</li>
             <li>Usar campañas sin entrega y medios sin calidad.</li>
             <li>Sumar presupuesto incremental cuando sea necesario.</li>
           </ul>
@@ -777,7 +694,7 @@
 
     <section class="section" id="medios">
       <div class="section-heading">
-        <div class="section-number">07 · Medios</div>
+        <div class="section-number">06 · Medios</div>
         <div>
           <h2 class="section-title">Google lidera; social y programática construyen demanda incremental</h2>
           <p class="section-intro">
@@ -837,7 +754,7 @@
 
     <section class="section" id="programatica">
       <div class="section-heading">
-        <div class="section-number">08 · Programática</div>
+        <div class="section-number">07 · Programática</div>
         <div>
           <h2 class="section-title">Rich Media para convertir curiosidad en demanda medible</h2>
           <p class="section-intro">
@@ -888,6 +805,28 @@
         </article>
       </div>
 
+      <div class="slot-demo" aria-label="Demostración interactiva de Rich Media para Slots">
+        <div class="slot-copy">
+          <span class="tag">Demo interactiva · 18+</span>
+          <h3>Encuentra tu universo de Slots</h3>
+          <p>
+            Este prototipo permite experimentar el gesto y la respuesta visual del formato. El giro revela un universo
+            de contenido para explorar; no reproduce probabilidades, no usa dinero y no entrega premios.
+          </p>
+        </div>
+        <div class="slot-machine">
+          <div class="slot-brand"><span>BetPlay Casino</span><span>Vista previa</span></div>
+          <div class="slot-reels" aria-live="polite">
+            <div class="slot-reel" data-slot-reel>⭐</div>
+            <div class="slot-reel" data-slot-reel>🍒</div>
+            <div class="slot-reel" data-slot-reel>💎</div>
+          </div>
+          <button class="slot-action" id="slotDemoButton" type="button">Probar giro demostrativo</button>
+          <p class="slot-result" id="slotDemoResult">Interactúa para descubrir un universo.</p>
+          <small class="slot-legal">Demostración creativa. Sin apuesta ni premio real. Solo para mayores de edad. Juega responsablemente.</small>
+        </div>
+      </div>
+
       <div class="callout warning">
         <strong>El concepto creativo se somete a política antes de producirse.</strong>
         <p>
@@ -934,6 +873,184 @@
           <li>Detener piezas con mala carga, fatiga, contexto inadecuado o calidad inferior de FTD.</li>
           <li>No escalar por CTR: exigir lift y resultado posterior confirmado por BI.</li>
         </ul>
+      </div>
+    </section>
+
+    <section class="section" id="social">
+      <div class="section-heading">
+        <div class="section-number">08 · Redes sociales</div>
+        <div>
+          <h2 class="section-title">Crear demanda, asistir la conversión y hacer visible el recorrido</h2>
+          <p class="section-intro">
+            Redes sociales no debe evaluarse como si fuera Search: su aporte principal ocurre antes de la búsqueda,
+            el registro y el FTD. Debe aumentar familiaridad con Casino, revelar productos, formar audiencias con señales
+            de interés y acompañar la decisión. También puede capturar conversiones, pero su escala se juzga por el
+            resultado combinado de exposición, demanda creada, conversión asistida y calidad de negocio.
+          </p>
+        </div>
+      </div>
+
+      <div class="decision">
+        <article class="decision-main">
+          <span class="decision-label">Rol recomendado</span>
+          <h3>Redes abre la conversación; Search captura la intención; producto y CRM convierten.</h3>
+          <p>
+            La intervención funciona como sistema. Video y contenido despiertan interés, las interacciones permiten
+            secuenciar mensajes, Search recoge la búsqueda activa, una landing específica reduce fricción y BI confirma
+            si el usuario llegó a FTD y generó valor. Ningún canal debe atribuirse por sí solo todo el resultado.
+          </p>
+        </article>
+        <aside class="decision-side">
+          <div>
+            <span class="decision-label">Principio de medición</span>
+            <strong>Asistir</strong>
+          </div>
+          <p>La atribución de plataforma orienta la operación; incrementalidad y BI autorizan la inversión.</p>
+        </aside>
+      </div>
+
+      <h3 class="subhead">Journey de demanda a resultado</h3>
+      <div class="journey" aria-label="Recorrido desde exposición en redes sociales hasta FTD y valor">
+        <article class="journey-step">
+          <span class="stage">01 · Exposición</span>
+          <h3>Descubrir Casino</h3>
+          <p>Video corto, creadores aprobados, entretenimiento y piezas de catálogo generan alcance adulto y atención.</p>
+          <span class="owner">Redes · Contenido</span>
+        </article>
+        <article class="journey-step">
+          <span class="stage">02 · Interés</span>
+          <h3>Explorar un producto</h3>
+          <p>Interacción, reproducción o visita identifica afinidad con Slots, Live, Ruleta o Aviator.</p>
+          <span class="owner">Social · Audiencias</span>
+        </article>
+        <article class="journey-step">
+          <span class="stage">03 · Consideración</span>
+          <h3>Resolver confianza</h3>
+          <p>Secuencia de producto, operación autorizada, experiencia móvil y juego responsable reduce incertidumbre.</p>
+          <span class="owner">Social · Landing</span>
+        </article>
+        <article class="journey-step">
+          <span class="stage">04 · Intención</span>
+          <h3>Buscar o regresar</h3>
+          <p>Search, tráfico directo y remarketing permitido recuperan al usuario con una promesa congruente.</p>
+          <span class="owner">Search · Social · CRM</span>
+        </article>
+        <article class="journey-step">
+          <span class="stage">05 · Resultado</span>
+          <h3>Registro → FTD → valor</h3>
+          <p>UX, verificación, depósito y seguimiento convierten; BI valida CPA FTD, tasa proxy → FTD y NGR D30.</p>
+          <span class="owner">Producto · CRM · BI</span>
+        </article>
+      </div>
+
+      <div class="callout">
+        <strong>Los factores que mueven el resultado están repartidos a lo largo del journey.</strong>
+        <p>
+          Creatividad y frecuencia determinan atención; producto y audiencia determinan relevancia; confianza y landing
+          determinan avance; Search y remarketing recuperan intención; registro, verificación, medios de pago y CRM
+          determinan FTD. La lectura semanal debe mostrar dónde se rompe la cadena, no solo qué canal recibió el crédito.
+        </p>
+      </div>
+
+      <h3 class="subhead">Acciones de redes por etapa</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Frente</th><th>Acciones</th><th>Audiencia / señal</th><th>Resultado esperado</th><th>Cómo medir</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Generación de demanda</strong></td><td>Video vertical, catálogo por universos, contenido de producto, tendencias adaptadas y colaboraciones aprobadas.</td><td>Adultos elegibles en audiencias amplias y contextos permitidos.</td><td>Más conocimiento y curiosidad por Casino BetPlay.</td><td>Alcance incremental, atención, búsquedas de marca/producto y brand lift.</td></tr>
+            <tr><td><strong>Educación</strong></td><td>Series “conoce el juego”, carruseles, demostraciones no apostables y contenido sobre Casino en vivo.</td><td>Usuarios que vieron o interactuaron de forma cualificada.</td><td>Convertir interés genérico en preferencia por producto.</td><td>Reproducción cualificada, interacción útil y visita a landing específica.</td></tr>
+            <tr><td><strong>Confianza</strong></td><td>Experiencia real de la plataforma, operación autorizada, seguridad, soporte y herramientas de control.</td><td>Visitantes y usuarios que exploraron contenido, respetando consentimiento y políticas.</td><td>Reducir fricción antes de registro.</td><td>Engaged sessions, retorno, búsqueda directa y avance a registro.</td></tr>
+            <tr><td><strong>Conversión</strong></td><td>Anuncios del producto visto, prueba social verificable, beneficio elegible con términos claros y landing congruente.</td><td>Alta intención: visita de producto, inicio de registro o señales first-party permitidas.</td><td>Registro y FTD asistidos, sin forzar a social como fuente principal.</td><td>Registro deduplicado, CPA FTD, proxy → FTD y comparación contra holdout.</td></tr>
+            <tr><td><strong>Reactivación</strong></td><td>Mensajes de novedad, catálogo y continuidad para usuarios elegibles; exclusión de perfiles definidos por juego responsable.</td><td>Cohortes propias con consentimiento y reglas de supresión.</td><td>Retorno de calidad, no presión indiscriminada.</td><td>Reactivación incremental, frecuencia, supresiones y valor posterior.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="subhead">Push Notifications: retorno con permiso y contexto</h3>
+      <div class="grid-2">
+        <div>
+          <p class="muted">
+            Push puede conectar consideración y retorno cuando existe consentimiento explícito. Debe aportar una razón
+            concreta para abrir —novedad, catálogo, contenido o continuidad— y llevar mediante deep link al producto
+            mencionado. Los conceptos deben validarse con marca, legal, juego responsable y las políticas del canal antes de activarse.
+          </p>
+          <ul class="list list-check">
+            <li>Opt-in explícito, centro de preferencias y salida sencilla.</li>
+            <li>Horario permitido, frecuencia limitada y supresión después de conversión.</li>
+            <li>Segmentación por interés demostrado, no por vulnerabilidad o impulso.</li>
+            <li>Excluir menores, autoexcluidos y perfiles definidos por juego responsable.</li>
+            <li>Medir apertura incremental, visita, registro, FTD y desactivación de permisos.</li>
+          </ul>
+        </div>
+        <div class="push-preview" aria-label="Ejemplos de Push Notifications para Casino BetPlay">
+          <article class="push-item">
+            <span class="push-icon">🎰</span>
+            <div><strong>Soy feliz porqe hoy gane en el Casino de Betplay asi...</strong><p>BetPlay Casino · Push Notification</p></div>
+          </article>
+          <article class="push-item">
+            <span class="push-icon">✨</span>
+            <div><strong>Aburrido esperando el Bus, es momento del casino Betplay</strong><p>BetPlay Casino · Push Notification</p></div>
+          </article>
+          <article class="push-item">
+            <span class="push-icon">🟡</span>
+            <div><strong>Tu catálogo de Casino tiene novedades</strong><p>Vuelve a BetPlay y descubre qué llegó esta semana. Juega responsablemente.</p></div>
+          </article>
+        </div>
+      </div>
+
+      <h3 class="subhead">Distribución inicial del presupuesto social</h3>
+      <div class="allocation" aria-label="Distribución recomendada dentro del presupuesto de redes sociales">
+        <span class="a1" style="width:60%">Demanda · 60%</span>
+        <span class="a2" style="width:25%">Consideración · 25%</span>
+        <span class="a6" style="width:15%">Conversión · 15%</span>
+      </div>
+      <div class="legend">
+        <span><i style="background:#111"></i>Alcance, video y descubrimiento de producto</span>
+        <span><i style="background:#ffc000"></i>Secuencias, confianza y tráfico cualificado</span>
+        <span><i style="background:#777"></i>Remarketing y acciones de alta intención</span>
+      </div>
+      <p class="small muted">Punto de partida dentro del presupuesto social aprobado. Redistribuir por incrementalidad y calidad de FTD, no por volumen de conversiones reportado por cada plataforma.</p>
+
+      <div class="grid-3">
+        <article class="card dark">
+          <span class="tag">Always-on</span>
+          <h3>Catálogo y producto</h3>
+          <p>Una base continua de Casino, Slots y Live sostiene disponibilidad mental y alimenta audiencias por interés demostrado.</p>
+        </article>
+        <article class="card yellow">
+          <span class="tag">Pulsos</span>
+          <h3>Novedades y momentos</h3>
+          <p>Lanzamientos, mesas, juegos y contenidos estacionales crean razones nuevas para buscar y visitar, con calendario coordinado con Search.</p>
+        </article>
+        <article class="card">
+          <span class="tag">Conversión</span>
+          <h3>Secuencia, no repetición</h3>
+          <p>Después de una señal cualificada, cambiar de descubrimiento a prueba de producto, confianza y CTA; excluir al usuario cuando ya completó la acción.</p>
+        </article>
+      </div>
+
+      <h3 class="subhead">Tablero para conectar intervención y resultado</h3>
+      <div class="kpi-grid">
+        <article class="kpi"><span>Exposición</span><strong>Alcance incremental, frecuencia y atención</strong></article>
+        <article class="kpi"><span>Demanda</span><strong>Búsqueda de marca/producto y tráfico directo</strong></article>
+        <article class="kpi"><span>Interés</span><strong>Video cualificado, interacción y engaged visit</strong></article>
+        <article class="kpi"><span>Captura</span><strong>CTR de Search, cuota y conversión de landing</strong></article>
+        <article class="kpi"><span>Conversión</span><strong>Registro deduplicado y costo por registro</strong></article>
+        <article class="kpi"><span>Negocio</span><strong>FTD, CPA FTD y proxy → FTD</strong></article>
+        <article class="kpi"><span>Valor</span><strong>NGR D30 y calidad por cohorte expuesta</strong></article>
+        <article class="kpi"><span>Causalidad</span><strong>Lift geo/audiencia contra celda de control</strong></article>
+      </div>
+
+      <div class="callout warning">
+        <strong>No optimizar todo el sistema al último clic de redes.</strong>
+        <p>
+          Mantener campañas de conversión permite capturar demanda asistida, pero el presupuesto de generación se protege
+          con experimentos de lift. Si suben búsquedas, tráfico directo o conversión total en la celda expuesta, redes está
+          aportando aunque el último clic quede en Search. Si solo suben conversiones post-view de plataforma, no hay
+          evidencia suficiente para escalar.
+        </p>
       </div>
     </section>
 
@@ -1031,21 +1148,22 @@
         <div class="section-number">10 · 90 días</div>
         <div>
           <h2 class="section-title">De control operativo a crecimiento comprobado</h2>
-          <p class="section-intro">La secuencia minimiza contaminación de datos: primero propiedad y calidad, después aprendizaje y finalmente escala.</p>
+          <p class="section-intro">La secuencia construye una base comparable: primero propiedad y calidad, después aprendizaje y finalmente escala.</p>
         </div>
       </div>
 
       <div class="timeline">
         <article class="phase">
           <div class="phase-number">0–30</div>
-          <h3>Sanear y relanzar</h3>
+          <h3>Preparar y relanzar</h3>
           <ul>
             <li>Alinear proxy primario entre campañas.</li>
-            <li>Corregir geografía, UTM, naming y URLs.</li>
+            <li>Alinear geografía, UTM, naming y URLs.</li>
             <li>Ampliar negativas por taxonomía.</li>
             <li>Crear Marca-producto, Genérico y Ruleta/Live.</li>
             <li>Reconstruir Slots y limitar Aviator.</li>
             <li>Definir tablero semanal Google + BI.</li>
+            <li>Crear línea base social: alcance, búsqueda, tráfico directo y FTD.</li>
           </ul>
         </article>
         <article class="phase">
@@ -1056,6 +1174,7 @@
             <li>Probar hub Casino vs /registrarse.</li>
             <li>Probar landing Ruleta y Aviator.</li>
             <li>Prototipar los tres territorios creativos y validar políticas.</li>
+            <li>Activar social de demanda y secuencias de consideración.</li>
             <li>Activar competencia con techo de 5%.</li>
             <li>Aplicar tCPA solo donde haya estabilidad.</li>
             <li>Llegar a 35% si BI valida calidad.</li>
@@ -1068,6 +1187,7 @@
             <li>Abrir Broad como experimento aislado.</li>
             <li>Evaluar YouTube/Demand Gen incremental.</li>
             <li>Activar Rich Media vs video/display con celda de control.</li>
+            <li>Medir lift social y conversión total por celda expuesta.</li>
             <li>Regionalizar demanda en plazas prioritarias.</li>
             <li>Profundizar universo completo de 5.372 ideas.</li>
             <li>Escalar solo cohortes con FTD y valor positivo.</li>
@@ -1139,7 +1259,7 @@
       <div class="sources">
         <article class="source">
           <strong>Google Ads API · cuenta BetPlay</strong>
-          <p>Cuenta BRAND 2023 - BETPLAY 2020, customer ID 714-286-4193. Campañas, inversión, clics, conversiones, cuota, términos, configuración, objetivos y URLs. Datos del reporte cerrados el 1 de agosto de 2026. La validación en vivo del 6 de agosto de 2026 devolvió falta de permiso desde el MCC configurado; no se incorporaron cifras posteriores.</p>
+          <p>Cuenta BRAND 2023 - BETPLAY 2020, customer ID 714-286-4193. Campañas, inversión, clics, conversiones, cuota, términos, configuración, objetivos y URLs. Datos del reporte cerrados el 1 de agosto de 2026; no se incorporaron cifras posteriores.</p>
         </article>
         <article class="source">
           <strong>Keyword Planner API</strong>
@@ -1166,7 +1286,7 @@
 
   <footer class="container">
     <div class="footer-inner">
-      <span>BetPlay · Estrategia integrada de crecimiento Casino · Versión 1.1</span>
+      <span>BetPlay · Estrategia integrada de crecimiento Casino · Versión 1.5</span>
       <span>Preparado con datos cerrados al 1 de agosto de 2026</span>
     </div>
   </footer>
@@ -1188,6 +1308,45 @@
     }, { rootMargin: '-18% 0px -68% 0px', threshold: [0, .2, .5] });
 
     sections.forEach(section => observer.observe(section));
+
+    const slotButton = document.querySelector('#slotDemoButton');
+    const slotReels = [...document.querySelectorAll('[data-slot-reel]')];
+    const slotResult = document.querySelector('#slotDemoResult');
+    const slotSymbols = ['⭐', '🍒', '💎', '7️⃣', '🔔', '🍀'];
+    const slotUniverses = [
+      { symbols: ['⭐', '🍒', '💎'], message: 'Universo descubierto: Aventuras y fantasía.' },
+      { symbols: ['7️⃣', '🔔', '🍒'], message: 'Universo descubierto: Clásicos de Casino.' },
+      { symbols: ['💎', '🍀', '⭐'], message: 'Universo descubierto: Brillos y tesoros.' },
+      { symbols: ['🔔', '💎', '7️⃣'], message: 'Universo descubierto: Ritmo y acción.' }
+    ];
+
+    if (slotButton && slotReels.length === 3 && slotResult) {
+      slotButton.addEventListener('click', () => {
+        slotButton.disabled = true;
+        slotButton.textContent = 'Descubriendo…';
+        slotResult.textContent = 'Explorando el catálogo…';
+        slotReels.forEach(reel => reel.classList.add('spinning'));
+
+        let ticks = 0;
+        const animation = window.setInterval(() => {
+          slotReels.forEach(reel => {
+            reel.textContent = slotSymbols[Math.floor(Math.random() * slotSymbols.length)];
+          });
+          ticks += 1;
+          if (ticks < 12) return;
+
+          window.clearInterval(animation);
+          const universe = slotUniverses[Math.floor(Math.random() * slotUniverses.length)];
+          slotReels.forEach((reel, index) => {
+            reel.classList.remove('spinning');
+            reel.textContent = universe.symbols[index];
+          });
+          slotResult.textContent = universe.message;
+          slotButton.textContent = 'Descubrir otro universo';
+          slotButton.disabled = false;
+        }, 90);
+      });
+    }
   </script>
 </body>
 </html>
