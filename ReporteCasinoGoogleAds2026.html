@@ -224,11 +224,20 @@
     .slot-result { min-height: 24px; margin: 12px 0 0; color: var(--yellow); font-size: .8rem; font-weight: 700; }
     .slot-legal { display: block; margin-top: 9px; color: rgba(255,255,255,.55); font-size: .63rem; line-height: 1.4; }
 
-    .push-preview { display: grid; gap: 10px; margin-top: 16px; }
-    .push-item { display: grid; grid-template-columns: 42px minmax(0, 1fr); gap: 12px; align-items: start; padding: 15px; border: 1px solid var(--gray-200); border-radius: 16px; background: var(--white); box-shadow: 0 8px 24px rgba(0,0,0,.06); }
+    .phone-mockup { position: relative; width: min(100%, 350px); min-height: 650px; margin: 0 auto; padding: 13px; border: 3px solid #292929; border-radius: 44px; background: #101010; box-shadow: 0 24px 55px rgba(0,0,0,.2); }
+    .phone-mockup::before { content: ""; position: absolute; top: 20px; left: 50%; z-index: 3; width: 108px; height: 27px; border-radius: 999px; background: #080808; transform: translateX(-50%); }
+    .phone-screen { position: relative; overflow: hidden; min-height: 618px; padding: 25px 13px 24px; border-radius: 31px; background: radial-gradient(circle at 20% 10%, rgba(255,192,0,.8), transparent 28%), linear-gradient(155deg, #353535 0%, #171717 52%, #050505 100%); }
+    .phone-screen::after { content: ""; position: absolute; right: -80px; bottom: 65px; width: 240px; height: 240px; border: 55px solid rgba(255,192,0,.12); border-radius: 50%; }
+    .phone-status { position: relative; z-index: 2; display: flex; justify-content: space-between; padding: 0 7px; color: var(--white); font-size: .68rem; font-weight: 700; }
+    .phone-clock { position: relative; z-index: 2; margin: 45px 0 28px; color: var(--white); text-align: center; }
+    .phone-clock strong { display: block; font-size: 3.9rem; font-weight: 300; line-height: 1; letter-spacing: -.07em; }
+    .phone-clock span { display: block; margin-top: 7px; font-size: .78rem; }
+    .push-preview { position: relative; z-index: 2; display: grid; gap: 10px; }
+    .push-item { display: grid; grid-template-columns: 42px minmax(0, 1fr); gap: 11px; align-items: start; padding: 13px; border: 1px solid rgba(255,255,255,.38); border-radius: 18px; background: rgba(255,255,255,.88); box-shadow: 0 8px 24px rgba(0,0,0,.12); backdrop-filter: blur(14px); }
     .push-icon { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 11px; background: var(--yellow); font-size: 1.15rem; }
     .push-item strong { display: block; font-size: .83rem; }
     .push-item p { margin: 4px 0 0; color: var(--gray-700); font-size: .74rem; line-height: 1.45; }
+    .phone-home { position: absolute; bottom: 9px; left: 50%; z-index: 3; width: 115px; height: 5px; border-radius: 999px; background: rgba(255,255,255,.85); transform: translateX(-50%); }
 
     .campaign-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 20px; }
     .campaign { padding: 20px; border: 1px solid var(--gray-200); border-radius: 17px; }
@@ -320,7 +329,7 @@
         5.372 ideas del Planificador de Palabras Clave, estructura objetivo y plan de activación de 90 días.
       </p>
       <div class="hero-meta">
-        <span>Versión 1.5</span>
+        <span>Versión 1.6</span>
         <span>Análisis: 2 de agosto de 2026</span>
         <span>Datos cerrados: 1 de agosto de 2026</span>
         <span>Moneda: COP</span>
@@ -984,19 +993,26 @@
             <li>Medir apertura incremental, visita, registro, FTD y desactivación de permisos.</li>
           </ul>
         </div>
-        <div class="push-preview" aria-label="Ejemplos de Push Notifications para Casino BetPlay">
-          <article class="push-item">
-            <span class="push-icon">🎰</span>
-            <div><strong>Soy feliz porqe hoy gane en el Casino de Betplay asi...</strong><p>BetPlay Casino · Push Notification</p></div>
-          </article>
-          <article class="push-item">
-            <span class="push-icon">✨</span>
-            <div><strong>Aburrido esperando el Bus, es momento del casino Betplay</strong><p>BetPlay Casino · Push Notification</p></div>
-          </article>
-          <article class="push-item">
-            <span class="push-icon">🟡</span>
-            <div><strong>Tu catálogo de Casino tiene novedades</strong><p>Vuelve a BetPlay y descubre qué llegó esta semana. Juega responsablemente.</p></div>
-          </article>
+        <div class="phone-mockup" aria-label="Mockup de celular con Push Notifications para Casino BetPlay">
+          <div class="phone-screen">
+            <div class="phone-status"><span>9:41</span><span>5G&nbsp;&nbsp;●●●</span></div>
+            <div class="phone-clock"><strong>9:41</strong><span>Viernes, 7 de agosto</span></div>
+            <div class="push-preview">
+              <article class="push-item">
+                <span class="push-icon">🎰</span>
+                <div><strong>Soy feliz porqe hoy gane en el Casino de Betplay asi...</strong><p>BetPlay Casino · ahora</p></div>
+              </article>
+              <article class="push-item">
+                <span class="push-icon">✨</span>
+                <div><strong>Aburrido esperando el Bus, es momento del casino Betplay</strong><p>BetPlay Casino · hace 2 min</p></div>
+              </article>
+              <article class="push-item">
+                <span class="push-icon">🟡</span>
+                <div><strong>Tu catálogo de Casino tiene novedades</strong><p>Vuelve a BetPlay y descubre qué llegó esta semana.</p></div>
+              </article>
+            </div>
+          </div>
+          <span class="phone-home"></span>
         </div>
       </div>
 
@@ -1286,7 +1302,7 @@
 
   <footer class="container">
     <div class="footer-inner">
-      <span>BetPlay · Estrategia integrada de crecimiento Casino · Versión 1.5</span>
+      <span>BetPlay · Estrategia integrada de crecimiento Casino · Versión 1.6</span>
       <span>Preparado con datos cerrados al 1 de agosto de 2026</span>
     </div>
   </footer>
