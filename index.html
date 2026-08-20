@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BetPlay · Estrategia Casino Google Ads</title>
+  <meta name="description" content="Reportes de Google Ads y GA4 de BetPlay Colombia: diagnóstico del registro y estrategia de crecimiento Casino." />
+  <title>BetPlay · Analítica de medios 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --yellow: #FFC000;
+      --yellow-soft: #fff5cf;
       --black: #111111;
       --white: #ffffff;
       --gray: #6b6b6b;
@@ -106,6 +108,7 @@
     }
 
     .btn:hover { transform: translateY(-2px); }
+    .btn:focus-visible { outline: 3px solid var(--black); outline-offset: 3px; }
 
     .btn-primary {
       background: var(--black);
@@ -155,6 +158,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      gap: 32px;
       position: relative;
       overflow: hidden;
     }
@@ -210,14 +214,25 @@
       max-width: 380px;
     }
 
-    .route-card {
+    .route-list {
       position: relative;
       z-index: 1;
-      margin-top: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .route-card {
       background: rgba(255,255,255,.06);
       border: 1px solid rgba(255,255,255,.1);
       border-radius: 28px;
       padding: 24px;
+      transition: background .2s ease, border-color .2s ease;
+    }
+
+    .route-card:hover {
+      background: rgba(255,255,255,.1);
+      border-color: rgba(255,192,0,.4);
     }
 
     .route-card small {
@@ -227,12 +242,19 @@
       letter-spacing: .08em;
       margin-bottom: 12px;
       font-weight: 600;
+      font-size: .72rem;
     }
 
     .route-card strong {
       display: block;
       font-size: 1.3rem;
       margin-bottom: 10px;
+      line-height: 1.2;
+    }
+
+    .route-card p {
+      font-size: .88rem;
+      line-height: 1.65;
     }
 
     .route-card a {
@@ -243,6 +265,18 @@
       text-decoration: none;
       font-weight: 600;
       margin-top: 16px;
+    }
+
+    .route-card a:focus-visible { outline: 2px solid var(--yellow); outline-offset: 3px; }
+
+    .route-card.featured {
+      background: rgba(255,192,0,.14);
+      border-color: rgba(255,192,0,.45);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+      .btn:hover { transform: none; }
     }
 
     @media (max-width: 980px) {
@@ -256,30 +290,32 @@
   <main class="page">
     <section class="shell">
       <div class="hero">
-        <div class="eyebrow">BetPlay · Google Ads</div>
-        <h1>Estrategia Casino 2026</h1>
+        <div class="eyebrow">BetPlay · Google Ads + GA4</div>
+        <h1>Analítica de medios 2026</h1>
         <p class="lead">
-          Un único reporte con el diagnóstico de Google Ads, la demanda del Planificador
-          de Palabras Clave y la hoja de ruta para dar prioridad real a Casino.
+          Los reportes de la cuenta de BetPlay Colombia en un solo lugar: el diagnóstico del registro
+          —por qué cayó en agosto y qué redistribuir sin subir el presupuesto diario— y la estrategia
+          de crecimiento para Casino, con la demanda del Planificador de Palabras Clave.
         </p>
 
         <div class="actions">
-          <a class="btn btn-primary" href="./ReporteCasinoGoogleAds2026.html">Abrir reporte unificado</a>
-          <a class="btn btn-secondary" href="./PlanAccionGoogleAds.html">Ver archivo histórico</a>
+          <a class="btn btn-primary" href="./DiagnosticoRegistroAgosto2026.html">Abrir diagnóstico del registro</a>
+          <a class="btn btn-secondary" href="./ReporteCasinoGoogleAds2026.html">Ver estrategia Casino</a>
+          <a class="btn btn-secondary" href="./PlanAccionGoogleAds.html">Archivo histórico</a>
         </div>
 
         <div class="mini-grid">
           <article class="mini-card">
             <span>Archivo</span>
-            <strong>1 reporte integrado</strong>
+            <strong>2 reportes vigentes</strong>
           </article>
           <article class="mini-card">
             <span>Tipo</span>
-            <strong>Estrategia, demanda y medios</strong>
+            <strong>Diagnóstico, demanda y medios</strong>
           </article>
           <article class="mini-card">
             <span>Acceso</span>
-            <strong>Google Ads + Keyword Planner</strong>
+            <strong>Google Ads + GA4 + Keyword Planner</strong>
           </article>
         </div>
       </div>
@@ -287,18 +323,27 @@
       <aside class="panel">
         <div class="panel-top">
           <div class="panel-label">Contenido destacado</div>
-          <h2>Prioridad real para Casino</h2>
+          <h2>El registro es el resultado clave</h2>
           <p>
-            Diagnóstico de inversión, mapa de 5.372 ideas de búsqueda, nueva estructura
-            de campañas y un plan de activación de 90 días.
+            El CPA por registro está estable; lo que se apagó fue el volumen. El diagnóstico fecha las
+            causas y registra la redistribución aplicada el 20 de agosto, con el tope diario intacto.
           </p>
         </div>
 
-        <div class="route-card">
-          <small>Disponible ahora</small>
-          <strong>Estrategia de crecimiento Casino</strong>
-          <p>Google lidera la captura de demanda, complementado por social y programática bajo pruebas controladas.</p>
-          <a href="./ReporteCasinoGoogleAds2026.html">Ir al reporte unificado →</a>
+        <div class="route-list">
+          <div class="route-card featured">
+            <small>Más reciente · 20 de agosto de 2026</small>
+            <strong>Diagnóstico del registro</strong>
+            <p>Cinco causas fechadas, economía por campaña y las acciones ya aplicadas en la cuenta, sin mover el tope diario.</p>
+            <a href="./DiagnosticoRegistroAgosto2026.html">Ir al diagnóstico →</a>
+          </div>
+
+          <div class="route-card">
+            <small>2 de agosto de 2026</small>
+            <strong>Estrategia de crecimiento Casino</strong>
+            <p>Mapa de 5.372 ideas de búsqueda, nueva estructura de campañas y plan de activación de 90 días.</p>
+            <a href="./ReporteCasinoGoogleAds2026.html">Ir al reporte unificado →</a>
+          </div>
         </div>
       </aside>
     </section>
